@@ -22,54 +22,63 @@ class _SelectDocumentPageState extends State<SelectDocumentPage> {
       backgroundColor: Color(0xfff9f9f9),
       body: Column(
         children: [
-          Container(
-            width: double.infinity,
-            height: 149,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.only(
-                bottomLeft: Radius.circular(32),
-                bottomRight: Radius.circular(32),
+          Positioned(
+            top: 0,
+            left: 0,
+            right: 0,
+            child: Container(
+              height: 149,
+              decoration: const BoxDecoration(
+                borderRadius: BorderRadius.only(
+                  bottomLeft: Radius.circular(30.0),
+                  bottomRight: Radius.circular(30.0),
+                ),
+                color: Color(0xff0D0140),
               ),
-              image: DecorationImage(
-                fit: BoxFit.fill,
-                image: AssetImage("assets/JPImages/kycImages/purpleBg.jpeg"),
+              child: Stack(
+                children: [
+                  SvgPicture.asset(
+                    "assets/Components/homemain.svg",
+                    fit: BoxFit.fill,
+                  ),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      SizedBox(height: mQuery.size.height * 0.03),
+                      Padding(
+                        padding: EdgeInsets.only(left: mQuery.size.width * 0.045),
+                        child: GestureDetector(
+                          onTap: () {
+                            Navigator.pop(context);
+                          },
+                          child: SvgPicture.asset("assets/JPImages/kycImages/ArrowBack.svg"),
+                        ),
+                      ),
+                      Center(
+                        child: Text(
+                          "Document Verification",
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 20,
+                            fontFamily: 'RobotoBold',
+                          ),
+                        ),
+                      ),
+                      SizedBox(height: mQuery.size.height * 0.018),
+                      Center(
+                        child: Text(
+                          "Phase 2",
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 20,
+                            fontFamily: 'RobotoBold',
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
               ),
-            ),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                SizedBox(height: mQuery.size.height * 0.03),
-                Padding(
-                  padding: EdgeInsets.only(left: mQuery.size.width * 0.045),
-                  child: GestureDetector(
-                    onTap: () {
-                      Navigator.pop(context);
-                    },
-                    child: SvgPicture.asset("assets/JPImages/kycImages/ArrowBack.svg"),
-                  ),
-                ),
-                Center(
-                  child: Text(
-                    "Document Verification",
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 20,
-                      fontFamily: 'SatoshiBold',
-                    ),
-                  ),
-                ),
-                SizedBox(height: mQuery.size.height * 0.018),
-                Center(
-                  child: Text(
-                    "Phase 2",
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 20,
-                      fontFamily: 'SatoshiBold',
-                    ),
-                  ),
-                ),
-              ],
             ),
           ),
           Expanded(
@@ -88,7 +97,7 @@ class _SelectDocumentPageState extends State<SelectDocumentPage> {
                             "Please Select Any One ",
                             style: TextStyle(
                                 fontSize: 17,
-                                fontFamily: 'SatoshiBold',
+                                fontFamily: 'RobotoBold',
                                 color: Color(0xff130160)),
                           ),
                         ),
@@ -97,7 +106,7 @@ class _SelectDocumentPageState extends State<SelectDocumentPage> {
                             "Document To Upload",
                             style: TextStyle(
                                 fontSize: 17,
-                                fontFamily: 'SatoshiBold',
+                                fontFamily: 'RobotoBold',
                                 color: Color(0xff130160)),
                           ),
                         ),
@@ -174,7 +183,7 @@ class _SelectDocumentPageState extends State<SelectDocumentPage> {
             text,
             style: TextStyle(
               color: selectedIndex == index ? Colors.white : Color(0xff130160),
-              fontFamily: 'SatoshiBold',
+              fontFamily: 'RobotoBold',
             ),
           ),
         ),

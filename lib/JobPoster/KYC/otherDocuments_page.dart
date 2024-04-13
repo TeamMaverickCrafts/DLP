@@ -55,7 +55,7 @@ class _OtherDocumentsPageState extends State<OtherDocumentsPage> {
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 20,
-                      fontFamily: 'SatoshiBold',
+                      fontFamily: 'RobotoBold',
                     ),
                   ),
                 ),
@@ -66,7 +66,7 @@ class _OtherDocumentsPageState extends State<OtherDocumentsPage> {
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 20,
-                      fontFamily: 'SatoshiBold',
+                      fontFamily: 'RobotoBold',
                     ),
                   ),
                 )
@@ -88,7 +88,7 @@ class _OtherDocumentsPageState extends State<OtherDocumentsPage> {
                           "Other Documents",
                           style: TextStyle(
                             color: Color(0xff150B3D),
-                            fontFamily: 'SatoshiBold',
+                            fontFamily: 'RobotoBold',
                           ),
                         ),
                         SizedBox(height: mQuery.size.height * 0.02),
@@ -97,7 +97,7 @@ class _OtherDocumentsPageState extends State<OtherDocumentsPage> {
                           style: TextStyle(
                             color: Color(0xff0D0140),
                             fontSize: 12,
-                            fontFamily: 'SatoshiBold',
+                            fontFamily: 'RobotoBold',
                           ),
                         ),
                         SizedBox(height: mQuery.size.height * 0.012),
@@ -122,7 +122,7 @@ class _OtherDocumentsPageState extends State<OtherDocumentsPage> {
                                   _selectedDocument ?? 'Select',
                                   style: TextStyle(
                                     fontSize: 12,
-                                    fontFamily: 'SatoshiRegular',
+                                    fontFamily: 'RobotoRegular',
                                   ),
                                 ),
                                 Icon(
@@ -177,7 +177,7 @@ class _OtherDocumentsPageState extends State<OtherDocumentsPage> {
                           style: TextStyle(
                             fontSize: 12,
                             color: Color(0xff524B6B),
-                            fontFamily: 'SatoshiRegular',
+                            fontFamily: 'RobotoRegular',
                           ),
                         ),
                         SizedBox(height: mQuery.size.height * 0.023),
@@ -198,7 +198,7 @@ class _OtherDocumentsPageState extends State<OtherDocumentsPage> {
                                       style: TextStyle(
                                         color: Color(0xff150B3D),
                                         fontSize: 12,
-                                        fontFamily: 'SatoshiMedium',
+                                        fontFamily: 'RobotoMedium',
                                       ),
                                     ),
                                   ],
@@ -225,7 +225,7 @@ class _OtherDocumentsPageState extends State<OtherDocumentsPage> {
                                       style: TextStyle(
                                         color: Color(0xff150B3D),
                                         fontSize: 12,
-                                        fontFamily: 'SatoshiMedium',
+                                        fontFamily: 'RobotoMedium',
                                       ),
                                     ),
                                   ],
@@ -262,7 +262,7 @@ class _OtherDocumentsPageState extends State<OtherDocumentsPage> {
                     "SAVE",
                     style: TextStyle(
                       color: Colors.white,
-                      fontFamily: 'SatoshiBold',
+                      fontFamily: 'RobotoBold',
                     ),
                   ),
                 ),

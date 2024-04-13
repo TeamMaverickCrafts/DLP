@@ -16,19 +16,19 @@ class _FollowersPageState extends State<FollowersPage> {
   final List<Map<String, dynamic>> followers = [
     {
       'name': 'Mike Mazo',
-      'image': 'https://s3-alpha-sig.figma.com/img/89c9/d898/0915363a2c70375926d3e4a60ea94e15?Expires=1712534400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=PZy1yJWfgiMkYWvAzaoy5ZKgZZRgL7mHkV~bvgXDUFjiurpFQaSsH6l7whL4nn96aXuRgP15ngWMHHOXkcFrLDWL1qYqgKJk97XFUBO2cXCNHZfmbt2XDApVrds3dx05P19RfAqAweqL9gbqTjgyDc65mbHTQ3~GjebhuOltlLwPzdwAKOsuFoXzS17~J1dLGElbGYFYyHDIjTd6qwvxr1fUJJvSmibjpQ6vXh4c5iA1I5HJ98O7X21SXD4Lfr9Ji5KBhh59ZRK6oHHjaYuzdeTgMgKM4zJxFGXYKXBdhNROXigHnBydJpYEzKJ0tciO13H2qLRdKyiRt~gzHP~U5g__',
+      'image': 'https://s3-alpha-sig.figma.com/img/89c9/d898/0915363a2c70375926d3e4a60ea94e15?Expires=1713744000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=hMA92nYG7BGnJYFqgHWzXeXRomLnkL0RBWdV61TS3QF8co8FgZN~OlMsiPioJurg6HKW21ylIyti8tTvqtzwcSX4l4yYqpxmU~pFpqAJU0hhNlxUn9sGOQmPmKCf8Z0rVYzNQA5Y61XYMcT2CU8P3ImKQaYAkNesmw~fMjU2ZSKqN01zLTdYY8LoKjkN1L~fSkV2~gG3cpJF1FefvyoOueMyavcq7UdxUbQJoBPD-~r8Kccs5ceBAzvzRLEQKqmtZysT2JIhAOq4kwAyKJg0xE4qlJzVyoulY1GY8gTsY9jz-GdM0m~CLAwhrgX8Z7XvJKjlj5l5PO9VoPwtrbvLRw__',
     },
     {
       'name': 'Marvin Esro',
-      'image': 'https://s3-alpha-sig.figma.com/img/e235/a8bb/1492b144ee67684e05d7dd970dee8479?Expires=1712534400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=O0m0anZFQQDgbz9PwZ9Xi3S0Jq3x-Vxs2OIfmitAQx7ev5oSQ5v~46ofaid7x1~p4AjRNb8fR0aKd69sj2gH5Su-mf68ayLNv-fcGJ8~yL3VIoDGQ4gbraREKE41NDrkwpfgidIMPi0lhE0CkCk5rHBaw~cKF35sbkPOoAZfaB73jDQ16uzg3uocGlt1k3q2cA~soJ8CKL56RILFDz6pyPvH2HD7mznzGl59oLbbJ8QZ8z3QS5gYjLj3yCshVqpDYvLuOpVQhPH0ln49Mc8LJQ2vXCYsp61z2NDXVd6jVehCQzyljDVhXf60Npul706Fhxn5cPjDVbTx3P~1LLOQxQ__',
+      'image': 'https://s3-alpha-sig.figma.com/img/e235/a8bb/1492b144ee67684e05d7dd970dee8479?Expires=1713744000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=cLBg-bN2i9gtpXBaqdfakaSejstuVq5~-u9F1oieMPJRipvGFA9qwtfFUOnx9CTK9Nist6nbDK~RwWDwXsEb6ddpTW4qWn4pAIWv30OPcGYJ88y8CuYBPHtLUjaMAL9AaUWcQCZNxQWKg2oQ-OVx0UHQY0mEvD-pnYVSHeQIBPf-Nig86XXWA3~mZYeSJ5cCoIA-Ivop~sdv96GbE3fF2WE3HVm-YffItILMxUS~w5OWNit6xlEav4HRihVV5X2kruLr8pZFFvp3XHrAXEbYASZ7jvxKqZKPqGaHGNEIuheLTImdYg87pVhkGsx34xpQCYL32wQlScK8x~r6V82~cg__',
     },
     {
       'name': 'Gregory Robert',
-      'image': 'https://s3-alpha-sig.figma.com/img/bd7d/a1cc/cb4c9c747cd5aa06ca16a3cf66d39315?Expires=1712534400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=UyTS8HD4QgaSZE~yOOdUaHdjxMLV4CQmvBLcbz17H9jERyQRuPXde9FnWWpZ2yKzDEa03kcgGwlUx~k2yREMQFIOLfMM7bzG2hPqSniut91Z1~DXxUTlPJGg9qD~Q0Eil2IoSIIXGaXfWEOdL-1~W0l3UbtqjsxgAS3Gd7entYiLeelZXcChMD-tNBJmm21BCk1qbX3WTiH3cMpFGDRTjBqmbTd7EdB5X50fyaBGKPgybk6tfpcF9pqIUaAqUfmK8OU~Bl0bqWhZcQLyHBtlZDMm6WliWMI7HWfj4vClEsxdwI2LiU8RLUirVAzj3cOz0bzv9u77pgiFCsFETqridQ__',
+      'image': 'https://s3-alpha-sig.figma.com/img/bd7d/a1cc/cb4c9c747cd5aa06ca16a3cf66d39315?Expires=1713744000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=QpNnPqvpQNhpNMK8ogTsb3OCNmQsDegRy15zGKUa1RTfWDYVLlZ3fEygxVyP4YTNbv2CeNlkrIzuXWG3eNfM8z~E0uPLjM1Txy5DW2~95RmF~vS~ORKTKQRl8pWlZSecCkNmYDlpRxPNK6PCe43hfm1GCTomZ-CDbgIqGY3iovg5L4sRBM~01dy8MznggJ8rsU9Oezbktn2wjhSPKYy6OoSNNt~Mix6JR90eLcMfHqNrSw-6npKANQgZt1bX7KjJ8~YgCTHHIxv581UL5zPyW4qkUwVkZL05GvD4arwPMP1pvGzuKyGC6qAEsGTd8lpE~s--yUrH~vX3LRca4YtdZg__',
     },
     {
       'name': 'Samuel Wits',
-      'image': 'https://s3-alpha-sig.figma.com/img/0d16/e5a0/046f7426ff666be54216de42c4d93e9d?Expires=1712534400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=N3w4uAaS7M0WtI5WG1y~Z57CMiJIsEkd9hqKF6mKiRy5Lv4Sy8qpyJdcBoWHHAaCtMd-wZk2B0s0YzE8e44szzhO3gwh-p1~fIJYrp9WaTUQ5PxXQn8FXYI2crTmN350zA0hAM9T6Mr6eE0SZJXFpKq9LXQRbCwcECvFDu95qbPa9mcVBsxBOt6VASckf-LhO3Vz5iPP0FnU~2W4m1dQKNYXVA8ymv~Edze5KL0JctVeu6U5UeKhwRNWM-LUv2NuznE7peFHj4qEmixyH9NP~Uzakgwbi0DzAoHwQOYFawBrGzgM7ll6l1I53DHjai8rZJSOFEyPnC9QXLOaaDpxqw__',
+      'image': 'https://s3-alpha-sig.figma.com/img/0d16/e5a0/046f7426ff666be54216de42c4d93e9d?Expires=1713744000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=SbLNptMatLkf5NkB9x7hVeSsZOHdMHhqEccb1CC4OQJfsXlphKsiXEfBtMHANkWOYXBw9OlCjiy4lMNeFC6Wi7lZ690U3WQ7JiKSiA9zqGOiYPHY4jZ1Y7Hf-b2o5m6ULYkq9yuCfcNFPkwqkVrEOU382zlB5qTUZ4Oo6s2XxT9MrUZ~DoThV5FkIeq4i7MdTRV0QpPvDQCqhkDvh33MFcTrweI8mZEr7XTcHuNgGFdP6jLjDBevm-L9uLO4FlClZHx0J~kauKb3xkESKk4nVsxFxn1nof08KpmXd8Dh3pPPZywRYyd656e3xCu6StZ0xRU~oCzoloQnNRl5~ol5bQ__',
     },
   ];
 
@@ -61,7 +61,7 @@ class _FollowersPageState extends State<FollowersPage> {
                             style: TextStyle(
                               color: Color(0xff150B3D),
                               fontSize: 18,
-                              fontFamily: 'SatoshiBold',
+                              fontFamily: 'RobotoBold',
                             ),
                           ),
                         ),
@@ -89,7 +89,7 @@ class _FollowersPageState extends State<FollowersPage> {
                               hintText: "Search",
                               hintStyle: TextStyle(
                                 fontSize: 12,
-                                fontFamily: 'SatoshiMedium',
+                                fontFamily: 'RobotoMedium',
                                 color: Color(0xffA0A7B1),
                               ),
                               contentPadding: EdgeInsets.symmetric(vertical: 15),
@@ -116,7 +116,7 @@ class _FollowersPageState extends State<FollowersPage> {
                         style: TextStyle(
                           color: Color(0xff150B3D),
                           fontSize: 16,
-                          fontFamily: 'SatoshiBold',
+                          fontFamily: 'RobotoBold',
                         ),
                       ),
                       SizedBox(height: mQuery.size.height * 0.023),
@@ -190,7 +190,7 @@ class _FollowersPageState extends State<FollowersPage> {
               follower['name'],
               style: TextStyle(
                 color: Color(0xff1B1A57),
-                fontFamily: 'SatoshiBold',
+                fontFamily: 'RobotoBold',
               ),
             ),
             Expanded(child: SizedBox()),
@@ -205,7 +205,7 @@ class _FollowersPageState extends State<FollowersPage> {
                 child: Text(
                   "View Profile",
                   style: TextStyle(
-                    fontFamily: 'SatoshiBold',
+                    fontFamily: 'RobotoBold',
                     fontSize: 9,
                   ),
                 ),

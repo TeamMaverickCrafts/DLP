@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:pinput/pinput.dart';
 
+import '../../filters/filter.dart';
+
 class DocVerificationP1 extends StatefulWidget {
   const DocVerificationP1({super.key});
 
@@ -29,7 +31,7 @@ class _DocVerificationP1State extends State<DocVerificationP1> {
         ),
         textStyle: TextStyle(
             fontSize: 26,
-            fontFamily: 'SatoshiBold'
+            fontFamily: 'RobotoBold'
         )
     );
     return Scaffold(
@@ -37,44 +39,53 @@ class _DocVerificationP1State extends State<DocVerificationP1> {
       backgroundColor: Color(0xfff9f9f9),
       body: Column(
         children: [
-          Container(
-            width: double.infinity,
-            height: 149,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.only(
-                bottomLeft: Radius.circular(32),
-                bottomRight: Radius.circular(32),
+          Positioned(
+            top: 0,
+            left: 0,
+            right: 0,
+            child: Container(
+              height: 149,
+              decoration: const BoxDecoration(
+                borderRadius: BorderRadius.only(
+                  bottomLeft: Radius.circular(30.0),
+                  bottomRight: Radius.circular(30.0),
+                ),
+                color: Color(0xff0D0140),
               ),
-              image: DecorationImage(
-                fit: BoxFit.fill,
-                image: AssetImage("assets/JPImages/kycImages/purpleBg.jpeg")
-              )
-            ),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                SizedBox(height: mQuery.size.height*0.03,),
-                Padding(
-                  padding: EdgeInsets.only(
-                      left: mQuery.size.width*0.045
+              child: Stack(
+                children: [
+                  SvgPicture.asset(
+                    "assets/Components/homemain.svg",
+                    fit: BoxFit.fill,
                   ),
-                  child: SvgPicture.asset("assets/JPImages/kycImages/ArrowBack.svg"),
-                ),
-                Center(
-                  child: Text("Document Verification",style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 20,
-                    fontFamily: 'SatoshiBold'
-                  ),),
-                ),
-            SizedBox(height: mQuery.size.height*0.018,),
-            Center(
-              child: Text("Phase 1",style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 20,
-                  fontFamily: 'SatoshiBold'
-              ),),)
-              ],
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  SizedBox(height: mQuery.size.height*0.03,),
+                  Padding(
+                    padding: EdgeInsets.only(
+                        left: mQuery.size.width*0.045
+                    ),
+                    child: SvgPicture.asset("assets/JPImages/kycImages/ArrowBack.svg"),
+                  ),
+                  Center(
+                    child: Text("Document Verification",style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 20,
+                        fontFamily: 'RobotoBold'
+                    ),),
+                  ),
+                  SizedBox(height: mQuery.size.height*0.018,),
+                  Center(
+                    child: Text("Phase 1",style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 20,
+                        fontFamily: 'RobotoBold'
+                    ),),)
+                ],
+              ),
+                ],
+              ),
             ),
           ),
           Expanded(
@@ -91,7 +102,7 @@ class _DocVerificationP1State extends State<DocVerificationP1> {
                         SizedBox(height: mQuery.size.height*0.023,),
                         Text("Email ID*",style: TextStyle(
                           color: Color(0xff150B3D),
-                          fontFamily: 'SatoshiBold'
+                          fontFamily: 'RobotoBold'
                         ),),
                         SizedBox(height: mQuery.size.height*0.012,),
                         Container(
@@ -126,14 +137,14 @@ class _DocVerificationP1State extends State<DocVerificationP1> {
                           child: Center(
                             child: Text("SEND OTP",style: TextStyle(
                               color: Colors.white,
-                              fontFamily: 'SatoshiBold'
+                              fontFamily: 'RobotoBold'
                             ),),
                           ),
                         ),
                         SizedBox(height: mQuery.size.height*0.03,),
                         Text("Please Enter The OTP",style: TextStyle(
                           fontSize: 12,
-                          fontFamily: 'SatoshiMedium',
+                          fontFamily: 'RobotoMedium',
                         ),),
                         SizedBox(height: mQuery.size.height*0.023,),
                         Padding(
@@ -150,7 +161,7 @@ class _DocVerificationP1State extends State<DocVerificationP1> {
                         Center(
                           child: Text("Wrong OTP Please Enter A Valid Number",style: TextStyle(
                             fontSize: 12,
-                            fontFamily: 'SatoshiMedium',
+                            fontFamily: 'RobotoMedium',
                             color: Color(0xffFC4646)
                           ),),
                         ),
@@ -166,12 +177,12 @@ class _DocVerificationP1State extends State<DocVerificationP1> {
                         children: [
                           TextSpan(text: "You have not received the SMS? ",style: TextStyle(
                               fontSize: 12,
-                              fontFamily: 'SatoshiMedium',
+                              fontFamily: 'RobotoMedium',
                               color: Colors.black
                           )),
                           TextSpan(text: "Resend",style: TextStyle(
                               fontSize: 12,
-                              fontFamily: 'SatoshiMedium',
+                              fontFamily: 'RobotoMedium',
                               color: Color(0xffFF9228),
                             decoration: TextDecoration.underline,
                             decorationColor: Color(0xffFF9228),
@@ -211,7 +222,7 @@ class _DocVerificationP1State extends State<DocVerificationP1> {
                 child: Center(
                   child: Text("SUBMIT OTP",style: TextStyle(
                     color: Colors.white,
-                    fontFamily: 'SatoshiBold',
+                    fontFamily: 'RobotoBold',
                   ),),
                 ),
               ),

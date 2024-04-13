@@ -49,49 +49,60 @@ class _GSTDetailsPageState extends State<GSTDetailsPage> {
       backgroundColor: Color(0xfff9f9f9),
       body: Column(
         children: [
-          Container(
-            width: double.infinity,
-            height: 149,
-            decoration: BoxDecoration(
+          Positioned(
+            top: 0,
+            left: 0,
+            right: 0,
+            child: Container(
+              height: 149,
+              decoration: const BoxDecoration(
                 borderRadius: BorderRadius.only(
-                  bottomLeft: Radius.circular(32),
-                  bottomRight: Radius.circular(32),
+                  bottomLeft: Radius.circular(30.0),
+                  bottomRight: Radius.circular(30.0),
                 ),
-                image: DecorationImage(
+                color: Color(0xff0D0140),
+              ),
+              child: Stack(
+                children: [
+                  SvgPicture.asset(
+                    "assets/Components/homemain.svg",
                     fit: BoxFit.fill,
-                    image: AssetImage("assets/JPImages/kycImages/purpleBg.jpeg"))),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                SizedBox(height: mQuery.size.height * 0.03),
-                Padding(
-                  padding: EdgeInsets.only(left: mQuery.size.width * 0.045),
-                  child: GestureDetector(
-                      onTap: () {
-                        Navigator.pop(context);
-                      },
-                      child: SvgPicture.asset("assets/JPImages/kycImages/ArrowBack.svg")),
-                ),
-                Center(
-                  child: Text(
-                    "Document Verification",
-                    style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 20,
-                        fontFamily: 'SatoshiBold'),
                   ),
-                ),
-                SizedBox(height: mQuery.size.height * 0.018),
-                Center(
-                  child: Text(
-                    "Phase 2",
-                    style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 20,
-                        fontFamily: 'SatoshiBold'),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      SizedBox(height: mQuery.size.height * 0.03),
+                      Padding(
+                        padding: EdgeInsets.only(left: mQuery.size.width * 0.045),
+                        child: GestureDetector(
+                            onTap: () {
+                              Navigator.pop(context);
+                            },
+                            child: SvgPicture.asset("assets/JPImages/kycImages/ArrowBack.svg")),
+                      ),
+                      Center(
+                        child: Text(
+                          "Document Verification",
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 20,
+                              fontFamily: 'RobotoBold'),
+                        ),
+                      ),
+                      SizedBox(height: mQuery.size.height * 0.018),
+                      Center(
+                        child: Text(
+                          "Phase 2",
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 20,
+                              fontFamily: 'RobotoBold'),
+                        ),
+                      )
+                    ],
                   ),
-                )
-              ],
+                ],
+              ),
             ),
           ),
           Expanded(
@@ -109,7 +120,7 @@ class _GSTDetailsPageState extends State<GSTDetailsPage> {
                           "GST Details",
                           style: TextStyle(
                               color: Color(0xff150B3D),
-                              fontFamily: 'SatoshiBold'),
+                              fontFamily: 'RobotoBold'),
                         ),
                         SizedBox(height: mQuery.size.height * 0.02),
                         Text(
@@ -117,7 +128,7 @@ class _GSTDetailsPageState extends State<GSTDetailsPage> {
                           style: TextStyle(
                               color: Color(0xff0D0140),
                               fontSize: 12,
-                              fontFamily: 'SatoshiBold'),
+                              fontFamily: 'RobotoBold'),
                         ),
                         SizedBox(height: mQuery.size.height * 0.012),
                         Container(
@@ -133,7 +144,7 @@ class _GSTDetailsPageState extends State<GSTDetailsPage> {
                               hintText: "$gstNo",
                               hintStyle: TextStyle(
                                   fontSize: 12,
-                                  fontFamily: 'SatoshiRegular'),
+                                  fontFamily: 'RobotoRegular'),
                               contentPadding:
                               EdgeInsets.symmetric(vertical: 14),
                               border: InputBorder.none,
@@ -147,7 +158,7 @@ class _GSTDetailsPageState extends State<GSTDetailsPage> {
                           style: TextStyle(
                               fontSize: 12,
                               color: Color(0xff524B6B),
-                              fontFamily: 'SatoshiRegular'),
+                              fontFamily: 'RobotoRegular'),
                         ),
                         SizedBox(height: mQuery.size.height * 0.023),
                         GestureDetector(
@@ -166,7 +177,7 @@ class _GSTDetailsPageState extends State<GSTDetailsPage> {
                                         style: TextStyle(
                                             color: Color(0xff150B3D),
                                             fontSize: 12,
-                                            fontFamily: 'SatoshiMedium')),
+                                            fontFamily: 'RobotoMedium')),
                                   ],
                                 ),
                               ),
@@ -190,7 +201,7 @@ class _GSTDetailsPageState extends State<GSTDetailsPage> {
                                         style: TextStyle(
                                             color: Color(0xff150B3D),
                                             fontSize: 12,
-                                            fontFamily: 'SatoshiMedium')),
+                                            fontFamily: 'RobotoMedium')),
                                   ],
                                 ),
                               ),
@@ -228,7 +239,7 @@ class _GSTDetailsPageState extends State<GSTDetailsPage> {
                     "SAVE",
                     style: TextStyle(
                       color: Colors.white,
-                      fontFamily: 'SatoshiBold',
+                      fontFamily: 'RobotoBold',
                     ),
                   ),
                 ),

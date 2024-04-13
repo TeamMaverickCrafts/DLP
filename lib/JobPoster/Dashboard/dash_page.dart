@@ -54,7 +54,7 @@ class _DashPageState extends State<DashPage> {
                           style: TextStyle(
                             color: Color(0xff150B3D),
                             fontSize: 18,
-                            fontFamily: 'SatoshiBold',
+                            fontFamily: 'RobotoBold',
                           ),
                         ),
                       ),
@@ -77,7 +77,7 @@ class _DashPageState extends State<DashPage> {
                           style: TextStyle(
                               color: Color(0xff150B3D),
                               fontSize: 18,
-                              fontFamily: 'SatoshiMedium'),
+                              fontFamily: 'RobotoMedium'),
                         ),
                       ],
                     ),
@@ -103,7 +103,7 @@ class _DashPageState extends State<DashPage> {
                                     "Total ODC",
                                     style: TextStyle(
                                         color: Color(0xff202224),
-                                        fontFamily: 'SatoshiMedium'),
+                                        fontFamily: 'RobotoMedium'),
                                   ),
                                   SizedBox(height: mQuery.size.height * 0.016),
                                   Text(
@@ -111,7 +111,7 @@ class _DashPageState extends State<DashPage> {
                                     style: TextStyle(
                                         color: Color(0xff202224),
                                         fontSize: 20,
-                                        fontFamily: 'SatoshiBold'),
+                                        fontFamily: 'RobotoBold'),
                                   )
                                 ],
                               ),
@@ -148,7 +148,7 @@ class _DashPageState extends State<DashPage> {
                                     "Active ODC",
                                     style: TextStyle(
                                         color: Color(0xff202224),
-                                        fontFamily: 'SatoshiMedium'),
+                                        fontFamily: 'RobotoMedium'),
                                   ),
                                   SizedBox(height: mQuery.size.height * 0.016),
                                   Text(
@@ -156,7 +156,7 @@ class _DashPageState extends State<DashPage> {
                                     style: TextStyle(
                                         color: Color(0xff202224),
                                         fontSize: 20,
-                                        fontFamily: 'SatoshiBold'),
+                                        fontFamily: 'RobotoBold'),
                                   )
                                 ],
                               ),
@@ -207,7 +207,7 @@ class _DashPageState extends State<DashPage> {
                                       "Total Hired",
                                       style: TextStyle(
                                           color: Color(0xff202224),
-                                          fontFamily: 'SatoshiMedium'),
+                                          fontFamily: 'RobotoMedium'),
                                     ),
                                     SizedBox(height: mQuery.size.height * 0.016),
                                     Text(
@@ -215,7 +215,7 @@ class _DashPageState extends State<DashPage> {
                                       style: TextStyle(
                                           color: Color(0xff202224),
                                           fontSize: 20,
-                                          fontFamily: 'SatoshiBold'),
+                                          fontFamily: 'RobotoBold'),
                                     )
                                   ],
                                 ),
@@ -253,7 +253,7 @@ class _DashPageState extends State<DashPage> {
                                 children: [
                                   Text("$p1%",style: TextStyle(
                                     fontSize: 7,
-                                    fontFamily: 'SatoshiBold'
+                                    fontFamily: 'RobotoBold'
                                   ),),
                                   Container(
                                     height: 50,
@@ -267,7 +267,7 @@ class _DashPageState extends State<DashPage> {
                                 children: [
                                   Text("$p2%",style: TextStyle(
                                       fontSize: 7,
-                                      fontFamily: 'SatoshiBold'
+                                      fontFamily: 'RobotoBold'
                                   ),),
                                   Container(
                                     height: 24,
@@ -293,7 +293,7 @@ class _DashPageState extends State<DashPage> {
                                       ),
                                       SizedBox(width: mQuery.size.width*0.02,),
                                       Text("Male",style: TextStyle(
-                                        fontFamily: 'SatoshiBold',
+                                        fontFamily: 'RobotoBold',
                                         fontSize: 8
                                       ),)
                                     ],
@@ -310,7 +310,7 @@ class _DashPageState extends State<DashPage> {
                                       ),
                                       SizedBox(width: mQuery.size.width*0.02,),
                                       Text("Female",style: TextStyle(
-                                        fontFamily: 'SatoshiBold',
+                                        fontFamily: 'RobotoBold',
                                         fontSize: 8
                                       ),)
                                     ],
@@ -328,7 +328,7 @@ class _DashPageState extends State<DashPage> {
                       style: TextStyle(
                           color: Color(0xff150B3D),
                           fontSize: 18,
-                          fontFamily: 'SatoshiMedium'),
+                          fontFamily: 'RobotoMedium'),
                     ),
                     SizedBox(height: mQuery.size.height * 0.023),
                     Row(
@@ -352,7 +352,7 @@ class _DashPageState extends State<DashPage> {
                                     "Total Post",
                                     style: TextStyle(
                                         color: Color(0xff202224),
-                                        fontFamily: 'SatoshiMedium'),
+                                        fontFamily: 'RobotoMedium'),
                                   ),
                                   SizedBox(height: mQuery.size.height * 0.016),
                                   Text(
@@ -360,7 +360,7 @@ class _DashPageState extends State<DashPage> {
                                     style: TextStyle(
                                         color: Color(0xff202224),
                                         fontSize: 20,
-                                        fontFamily: 'SatoshiBold'),
+                                        fontFamily: 'RobotoBold'),
                                   )
                                 ],
                               ),
@@ -397,7 +397,7 @@ class _DashPageState extends State<DashPage> {
                                     "Total Follwers",
                                     style: TextStyle(
                                         color: Color(0xff202224),
-                                        fontFamily: 'SatoshiMedium'),
+                                        fontFamily: 'RobotoMedium'),
                                   ),
                                   SizedBox(height: mQuery.size.height * 0.016),
                                   Text(
@@ -405,7 +405,7 @@ class _DashPageState extends State<DashPage> {
                                     style: TextStyle(
                                         color: Color(0xff202224),
                                         fontSize: 20,
-                                        fontFamily: 'SatoshiBold'),
+                                        fontFamily: 'RobotoBold'),
                                   )
                                 ],
                               ),
@@ -428,7 +428,7 @@ class _DashPageState extends State<DashPage> {
                     ),
                     SizedBox(height: mQuery.size.height*0.03,),
                     Text("Locations (Followers)",style: TextStyle(
-                        fontFamily: 'SatoshiMedium',
+                        fontFamily: 'RobotoMedium',
                       fontSize: 18
 
                     ),),
@@ -437,7 +437,7 @@ class _DashPageState extends State<DashPage> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text("Mumbai",style: TextStyle(
-                          fontFamily: 'SatoshiMedium',
+                          fontFamily: 'RobotoMedium',
                           color: Color(0xff686D7D)
                         ),),
                         Row(
@@ -456,14 +456,14 @@ class _DashPageState extends State<DashPage> {
                             Expanded(child: SizedBox()),
                             Text("120",style: TextStyle(
                               color: Color(0xff131417),
-                              fontFamily: 'SatoshiBold'
+                              fontFamily: 'RobotoBold'
                             ),)
                           ],
                         ),
                         SizedBox(height: mQuery.size.height*0.023,),
 
                         Text("Delhi",style: TextStyle(
-                            fontFamily: 'SatoshiMedium',
+                            fontFamily: 'RobotoMedium',
                             color: Color(0xff686D7D)
                         ),),
                         Row(
@@ -482,14 +482,14 @@ class _DashPageState extends State<DashPage> {
                             Expanded(child: SizedBox()),
                             Text("$f2",style: TextStyle(
                                 color: Color(0xff131417),
-                                fontFamily: 'SatoshiBold'
+                                fontFamily: 'RobotoBold'
                             ),)
                           ],
                         ),
                         SizedBox(height: mQuery.size.height*0.023,),
 
                         Text("Lucknow",style: TextStyle(
-                            fontFamily: 'SatoshiMedium',
+                            fontFamily: 'RobotoMedium',
                             color: Color(0xff686D7D)
                         ),),
                         Row(
@@ -508,14 +508,14 @@ class _DashPageState extends State<DashPage> {
                             Expanded(child: SizedBox()),
                             Text("$f3",style: TextStyle(
                                 color: Color(0xff131417),
-                                fontFamily: 'SatoshiBold'
+                                fontFamily: 'RobotoBold'
                             ),)
                           ],
                         ),
                         SizedBox(height: mQuery.size.height*0.023,),
 
                         Text("Dehradun",style: TextStyle(
-                            fontFamily: 'SatoshiMedium',
+                            fontFamily: 'RobotoMedium',
                             color: Color(0xff686D7D)
                         ),),
                         Row(
@@ -534,7 +534,7 @@ class _DashPageState extends State<DashPage> {
                             Expanded(child: SizedBox()),
                             Text("$f4",style: TextStyle(
                                 color: Color(0xff131417),
-                                fontFamily: 'SatoshiBold'
+                                fontFamily: 'RobotoBold'
                             ),)
                           ],
                         ),

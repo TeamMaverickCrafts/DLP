@@ -53,7 +53,7 @@ class _BlankDashBoardPageState extends State<BlankDashBoardPage> {
                           style: TextStyle(
                             color: Color(0xff150B3D),
                             fontSize: 18,
-                            fontFamily: 'SatoshiBold',
+                            fontFamily: 'RobotoBold',
                           ),
                         ),
                       ),
@@ -76,7 +76,7 @@ class _BlankDashBoardPageState extends State<BlankDashBoardPage> {
                           style: TextStyle(
                               color: Color(0xff150B3D),
                               fontSize: 18,
-                              fontFamily: 'SatoshiMedium'),
+                              fontFamily: 'RobotoMedium'),
                         ),
                       ],
                     ),
@@ -102,7 +102,7 @@ class _BlankDashBoardPageState extends State<BlankDashBoardPage> {
                                     "Total ODC",
                                     style: TextStyle(
                                         color: Color(0xff202224),
-                                        fontFamily: 'SatoshiMedium'),
+                                        fontFamily: 'RobotoMedium'),
                                   ),
                                   SizedBox(height: mQuery.size.height * 0.016),
                                   Text(
@@ -110,7 +110,7 @@ class _BlankDashBoardPageState extends State<BlankDashBoardPage> {
                                     style: TextStyle(
                                         color: Color(0xff202224),
                                         fontSize: 20,
-                                        fontFamily: 'SatoshiBold'),
+                                        fontFamily: 'RobotoBold'),
                                   )
                                 ],
                               ),
@@ -147,7 +147,7 @@ class _BlankDashBoardPageState extends State<BlankDashBoardPage> {
                                     "Active ODC",
                                     style: TextStyle(
                                         color: Color(0xff202224),
-                                        fontFamily: 'SatoshiMedium'),
+                                        fontFamily: 'RobotoMedium'),
                                   ),
                                   SizedBox(height: mQuery.size.height * 0.016),
                                   Text(
@@ -155,7 +155,7 @@ class _BlankDashBoardPageState extends State<BlankDashBoardPage> {
                                     style: TextStyle(
                                         color: Color(0xff202224),
                                         fontSize: 20,
-                                        fontFamily: 'SatoshiBold'),
+                                        fontFamily: 'RobotoBold'),
                                   )
                                 ],
                               ),
@@ -206,7 +206,7 @@ class _BlankDashBoardPageState extends State<BlankDashBoardPage> {
                                       "Total Hired",
                                       style: TextStyle(
                                           color: Color(0xff202224),
-                                          fontFamily: 'SatoshiMedium'),
+                                          fontFamily: 'RobotoMedium'),
                                     ),
                                     SizedBox(height: mQuery.size.height * 0.016),
                                     Text(
@@ -214,7 +214,7 @@ class _BlankDashBoardPageState extends State<BlankDashBoardPage> {
                                       style: TextStyle(
                                           color: Color(0xff202224),
                                           fontSize: 20,
-                                          fontFamily: 'SatoshiBold'),
+                                          fontFamily: 'RobotoBold'),
                                     )
                                   ],
                                 ),
@@ -252,7 +252,7 @@ class _BlankDashBoardPageState extends State<BlankDashBoardPage> {
                                 children: [
                                   Text("$p1%",style: TextStyle(
                                       fontSize: 7,
-                                      fontFamily: 'SatoshiBold'
+                                      fontFamily: 'RobotoBold'
                                   ),),
                                   Container(
                                     height: 4,
@@ -266,7 +266,7 @@ class _BlankDashBoardPageState extends State<BlankDashBoardPage> {
                                 children: [
                                   Text("$p2%",style: TextStyle(
                                       fontSize: 7,
-                                      fontFamily: 'SatoshiBold'
+                                      fontFamily: 'RobotoBold'
                                   ),),
                                   Container(
                                     height: 4,
@@ -292,7 +292,7 @@ class _BlankDashBoardPageState extends State<BlankDashBoardPage> {
                                       ),
                                       SizedBox(width: mQuery.size.width*0.02,),
                                       Text("Male",style: TextStyle(
-                                          fontFamily: 'SatoshiBold',
+                                          fontFamily: 'RobotoBold',
                                           fontSize: 8
                                       ),)
                                     ],
@@ -309,7 +309,7 @@ class _BlankDashBoardPageState extends State<BlankDashBoardPage> {
                                       ),
                                       SizedBox(width: mQuery.size.width*0.02,),
                                       Text("Female",style: TextStyle(
-                                          fontFamily: 'SatoshiBold',
+                                          fontFamily: 'RobotoBold',
                                           fontSize: 8
                                       ),)
                                     ],
@@ -327,7 +327,7 @@ class _BlankDashBoardPageState extends State<BlankDashBoardPage> {
                       style: TextStyle(
                           color: Color(0xff150B3D),
                           fontSize: 18,
-                          fontFamily: 'SatoshiMedium'),
+                          fontFamily: 'RobotoMedium'),
                     ),
                     SizedBox(height: mQuery.size.height * 0.023),
                     Row(
@@ -351,7 +351,7 @@ class _BlankDashBoardPageState extends State<BlankDashBoardPage> {
                                     "Total Post",
                                     style: TextStyle(
                                         color: Color(0xff202224),
-                                        fontFamily: 'SatoshiMedium'),
+                                        fontFamily: 'RobotoMedium'),
                                   ),
                                   SizedBox(height: mQuery.size.height * 0.016),
                                   Text(
@@ -359,7 +359,7 @@ class _BlankDashBoardPageState extends State<BlankDashBoardPage> {
                                     style: TextStyle(
                                         color: Color(0xff202224),
                                         fontSize: 20,
-                                        fontFamily: 'SatoshiBold'),
+                                        fontFamily: 'RobotoBold'),
                                   )
                                 ],
                               ),
@@ -396,7 +396,7 @@ class _BlankDashBoardPageState extends State<BlankDashBoardPage> {
                                     "Total Follwers",
                                     style: TextStyle(
                                         color: Color(0xff202224),
-                                        fontFamily: 'SatoshiMedium'),
+                                        fontFamily: 'RobotoMedium'),
                                   ),
                                   SizedBox(height: mQuery.size.height * 0.016),
                                   Text(
@@ -404,7 +404,7 @@ class _BlankDashBoardPageState extends State<BlankDashBoardPage> {
                                     style: TextStyle(
                                         color: Color(0xff202224),
                                         fontSize: 20,
-                                        fontFamily: 'SatoshiBold'),
+                                        fontFamily: 'RobotoBold'),
                                   )
                                 ],
                               ),
@@ -427,7 +427,7 @@ class _BlankDashBoardPageState extends State<BlankDashBoardPage> {
                     ),
                     SizedBox(height: mQuery.size.height*0.03,),
                     Text("Locations (Followers)",style: TextStyle(
-                        fontFamily: 'SatoshiMedium',
+                        fontFamily: 'RobotoMedium',
                         fontSize: 18
 
                     ),),
@@ -436,7 +436,7 @@ class _BlankDashBoardPageState extends State<BlankDashBoardPage> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text("City 1",style: TextStyle(
-                            fontFamily: 'SatoshiMedium',
+                            fontFamily: 'RobotoMedium',
                             color: Color(0xff686D7D)
                         ),),
                         Row(
@@ -455,14 +455,14 @@ class _BlankDashBoardPageState extends State<BlankDashBoardPage> {
                             Expanded(child: SizedBox()),
                             Text("$city",style: TextStyle(
                                 color: Color(0xff131417),
-                                fontFamily: 'SatoshiBold'
+                                fontFamily: 'RobotoBold'
                             ),)
                           ],
                         ),
                         SizedBox(height: mQuery.size.height*0.023,),
 
                         Text("City 2",style: TextStyle(
-                            fontFamily: 'SatoshiMedium',
+                            fontFamily: 'RobotoMedium',
                             color: Color(0xff686D7D)
                         ),),
                         Row(
@@ -481,14 +481,14 @@ class _BlankDashBoardPageState extends State<BlankDashBoardPage> {
                             Expanded(child: SizedBox()),
                             Text("$city",style: TextStyle(
                                 color: Color(0xff131417),
-                                fontFamily: 'SatoshiBold'
+                                fontFamily: 'RobotoBold'
                             ),)
                           ],
                         ),
                         SizedBox(height: mQuery.size.height*0.023,),
 
                         Text("City 3",style: TextStyle(
-                            fontFamily: 'SatoshiMedium',
+                            fontFamily: 'RobotoMedium',
                             color: Color(0xff686D7D)
                         ),),
                         Row(
@@ -507,14 +507,14 @@ class _BlankDashBoardPageState extends State<BlankDashBoardPage> {
                             Expanded(child: SizedBox()),
                             Text("$city",style: TextStyle(
                                 color: Color(0xff131417),
-                                fontFamily: 'SatoshiBold'
+                                fontFamily: 'RobotoBold'
                             ),)
                           ],
                         ),
                         SizedBox(height: mQuery.size.height*0.023,),
 
                         Text("City 4",style: TextStyle(
-                            fontFamily: 'SatoshiMedium',
+                            fontFamily: 'RobotoMedium',
                             color: Color(0xff686D7D)
                         ),),
                         Row(
@@ -533,7 +533,7 @@ class _BlankDashBoardPageState extends State<BlankDashBoardPage> {
                             Expanded(child: SizedBox()),
                             Text("$city",style: TextStyle(
                                 color: Color(0xff131417),
-                                fontFamily: 'SatoshiBold'
+                                fontFamily: 'RobotoBold'
                             ),)
                           ],
                         ),

@@ -34,7 +34,7 @@ class _AboutHotelPageState extends State<AboutHotelPage> {
              ),
             SizedBox(height: mQuery.size.height*0.045,),
             Text("About Hotel",style: TextStyle(
-              fontFamily: 'SatoshiBold',
+              fontFamily: 'RobotoBold',
               color: Color(0xff150B3D),
               fontSize: 15
             ),),
@@ -57,7 +57,7 @@ class _AboutHotelPageState extends State<AboutHotelPage> {
                   hintStyle: TextStyle(
                     color: Color(0xffAAA6B9),
                     fontSize: 12,
-                    fontFamily: 'SatoshiMedium'
+                    fontFamily: 'RobotoMedium'
                   )
                 ),
               ),
@@ -81,7 +81,7 @@ class _AboutHotelPageState extends State<AboutHotelPage> {
                 child: Center(
                   child: Text("SAVE",style: TextStyle(
                     color: Colors.white,
-                    fontFamily: 'SatoshiBold'
+                    fontFamily: 'RobotoBold'
                   ),),
                 ),
               ),

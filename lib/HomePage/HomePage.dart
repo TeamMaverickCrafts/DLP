@@ -1,11 +1,14 @@
 import 'package:daily_lancers/BottomNav/BottomNav.dart';
 import 'package:daily_lancers/Chat/UserChat.dart';
 import 'package:daily_lancers/HomePage/listview.dart';
+import 'package:daily_lancers/JobPoster/KYC/DocVerificationP1.dart';
 import 'package:daily_lancers/Profile/profile.dart';
 import 'package:daily_lancers/DemoAPIData/demodata.dart';
 import 'package:daily_lancers/filters/filter.dart';
+import 'package:daily_lancers/main.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:intl/intl.dart';
 
 List<Map<String, dynamic>> filteredList = [];
 
@@ -43,6 +46,7 @@ class _HomeState extends State<Home> {
 
   @override
   Widget build(BuildContext context) {
+    var mQuery = MediaQuery.of(context);
     return Scaffold(
       body: Stack(
         children: [
@@ -50,7 +54,146 @@ class _HomeState extends State<Home> {
             child: SingleChildScrollView(
               child: Column(
                 children: [
-                  Demo(),
+                  // (store.read("ankit") == "signup") ? Center(
+                  //   child: Column(
+                  //     children: [
+                  //       SizedBox(height: mQuery.size.height*0.45),
+                  //       SvgPicture.asset("assets/JPImages/dashboardImages/empty.svg"),
+                  //       SizedBox(height: mQuery.size.height*0.06,),
+                  //       GestureDetector(
+                  //         onTap: () {
+                  //           Navigator.push(context, MaterialPageRoute(builder: (context){
+                  //             return DocVerificationP1();
+                  //           }));
+                  //         },
+                  //         child: Container(
+                  //           width: double.infinity,
+                  //           height: 45,
+                  //           margin: EdgeInsets.symmetric(
+                  //               horizontal: mQuery.size.width*0.16
+                  //           ),
+                  //           decoration: BoxDecoration(
+                  //               color: Color(0xffFFD6AD),
+                  //               borderRadius: BorderRadius.circular(6)
+                  //           ),
+                  //           child: Center(
+                  //             child: Text("Please complete your kyc",
+                  //               style: TextStyle(
+                  //                   color: Color(0xff130160),
+                  //                   fontFamily: 'RobotoBold'
+                  //               ),
+                  //             ),
+                  //           ),
+                  //         ),
+                  //       )
+                  //     ],
+                  //   ),
+                  // ) : (store.read("ankit") == "signin") ? Demo() : Container(),
+                  // (store.read("ankit") == "signupIndv") ? Center(
+                  //   child: Column(
+                  //     children: [
+                  //       SizedBox(height: mQuery.size.height*0.45),
+                  //       SvgPicture.asset("assets/JPImages/dashboardImages/empty.svg"),
+                  //       SizedBox(height: mQuery.size.height*0.06,),
+                  //       GestureDetector(
+                  //         onTap: () {
+                  //           Navigator.push(context, MaterialPageRoute(builder: (context){
+                  //             return DocVerificationP1();
+                  //           }));
+                  //         },
+                  //         child: Container(
+                  //           width: double.infinity,
+                  //           height: 45,
+                  //           margin: EdgeInsets.symmetric(
+                  //               horizontal: mQuery.size.width*0.16
+                  //           ),
+                  //           decoration: BoxDecoration(
+                  //               color: Color(0xffFFD6AD),
+                  //               borderRadius: BorderRadius.circular(6)
+                  //           ),
+                  //           child: Center(
+                  //             child: Text("Please complete your kyc",
+                  //               style: TextStyle(
+                  //                   color: Color(0xff130160),
+                  //                   fontFamily: 'RobotoBold'
+                  //               ),
+                  //             ),
+                  //           ),
+                  //         ),
+                  //       )
+                  //     ],
+                  //   ),
+                  // ) : (store.read("ankit") == "signinIndv") ? Demo() : Demo()
+
+                  (store.read("ankit") == "signin" || store.read("ankit") == "signup") ? Center(
+                    child: Column(
+                      children: [
+                        SizedBox(height: mQuery.size.height*0.45),
+                        SvgPicture.asset("assets/JPImages/dashboardImages/empty.svg"),
+                        SizedBox(height: mQuery.size.height*0.06,),
+                        GestureDetector(
+                          onTap: () {
+                            Navigator.push(context, MaterialPageRoute(builder: (context){
+                              return DocVerificationP1();
+                            }));
+                          },
+                          child: Container(
+                            width: double.infinity,
+                            height: 45,
+                            margin: EdgeInsets.symmetric(
+                                horizontal: mQuery.size.width*0.16
+                            ),
+                            decoration: BoxDecoration(
+                                color: Color(0xffFFD6AD),
+                                borderRadius: BorderRadius.circular(6)
+                            ),
+                            child: Center(
+                              child: Text("Please complete your kyc",
+                                style: TextStyle(
+                                    color: Color(0xff130160),
+                                    fontFamily: 'RobotoBold'
+                                ),
+                              ),
+                            ),
+                          ),
+                        )
+                      ],
+                    ),
+                  ) : (store.read("ankit") == "signinIndv" || store.read("ankit") == "signupIndv") ? Center(
+                    child: Column(
+                      children: [
+                        SizedBox(height: mQuery.size.height*0.45),
+                        SvgPicture.asset("assets/JPImages/dashboardImages/empty.svg"),
+                        SizedBox(height: mQuery.size.height*0.06,),
+                        GestureDetector(
+                          onTap: () {
+                            Navigator.push(context, MaterialPageRoute(builder: (context){
+                              return DocVerificationP1();
+                            }));
+                          },
+                          child: Container(
+                            width: double.infinity,
+                            height: 45,
+                            margin: EdgeInsets.symmetric(
+                                horizontal: mQuery.size.width*0.16
+                            ),
+                            decoration: BoxDecoration(
+                                color: Color(0xffFFD6AD),
+                                borderRadius: BorderRadius.circular(6)
+                            ),
+                            child: Center(
+                              child: Text("Please complete your kyc",
+                                style: TextStyle(
+                                    color: Color(0xff130160),
+                                    fontFamily: 'RobotoBold'
+                                ),
+                              ),
+                            ),
+                          ),
+                        )
+                      ],
+                    ),
+                  ) : Demo(),
                 ],
               ),
             ),
@@ -99,6 +242,7 @@ class _HomeState extends State<Home> {
                                 SizedBox(
                                   height: 5.0,
                                 ),
+
                                 Row(
                                   children: [
                                     Icon(
@@ -151,8 +295,18 @@ class _HomeState extends State<Home> {
                         SizedBox(
                           height: MediaQuery.of(context).size.height * 0.03,
                         ),
-                        const Row(
+                         Row(
                           children: [
+                            (store.read("ankit") == "signup") ? Column(
+                              children: [
+                                SizedBox(height: 20,),
+                                Text("JOB UPDATES",style: TextStyle(
+                                  fontSize: 20,
+                                  fontFamily: 'RobotoBold',
+                                  color: Colors.white
+                                ),),
+                              ],
+                            ) :
                             Text(
                               "Find your dream job\nhere!",
                               style: TextStyle(
@@ -203,12 +357,9 @@ class _HomeState extends State<Home> {
                               // Filter
                               child: GestureDetector(
                                 onTap: () {
-                                  Navigator.pushReplacement(
-                                    context,
-                                    MaterialPageRoute(
-                                        builder: (context) =>
-                                            const Filter()), // Replace NextPage with your desired page
-                                  );
+                                  Navigator.push(context, MaterialPageRoute(builder: (context){
+                                    return Filter();
+                                  }));
                                 },
                                 child: SvgPicture.asset(
                                   "assets/Components/homesetting.svg",

@@ -96,7 +96,7 @@ class _ProfilePageState extends State<ProfilePage> {
         ),
         textStyle: TextStyle(
             fontSize: 26,
-            fontFamily: 'SatoshiBold'
+            fontFamily: 'RobotoBold'
         )
     );
     return Scaffold(
@@ -104,155 +104,165 @@ class _ProfilePageState extends State<ProfilePage> {
       backgroundColor: Color(0xfff9f9f9),
       body: Column(
         children: [
-          Container(
-            width: double.infinity,
-            height: 230,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.only(
-                bottomLeft: Radius.circular(32),
-                bottomRight: Radius.circular(32),
+          Positioned(
+            top: 0,
+            left: 0,
+            right: 0,
+            child: Container(
+              height: 230,
+              decoration: const BoxDecoration(
+                borderRadius: BorderRadius.only(
+                  bottomLeft: Radius.circular(30.0),
+                  bottomRight: Radius.circular(30.0),
+                ),
+                color: Color(0xff0D0140),
               ),
-              image: DecorationImage(
-                fit: BoxFit.fill,
-                image: AssetImage("assets/JPImages/kycImages/purpleBg.jpeg"),
-              ),
-            ),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                SizedBox(height: mQuery.size.height * 0.03),
-                Padding(
-                  padding: EdgeInsets.symmetric(horizontal: mQuery.size.width * 0.045),
-                  child: Column(
+              child: Stack(
+                children: [
+                  SvgPicture.asset(
+                    "assets/Components/homemain.svg",
+                    fit: BoxFit.fill,
+                  ),
+                  Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Row(
-                        children: [
-                          SvgPicture.asset("assets/JPImages/kycImages/ArrowBack.svg"),
-                          Expanded(child: SizedBox()),
-                          SvgPicture.asset("assets/JPImages/profileImages/shareIcon.svg"),
-                          SizedBox(width: mQuery.size.width * 0.04),
-                          SvgPicture.asset("assets/JPImages/profileImages/settingIcon.svg"),
-                        ],
-                      ),
-                      GestureDetector(
-                        onTap: ()
-                          {
-                            Navigator.push(context, MaterialPageRoute(builder: (context){
-                              return CompanyProfilePage();
-                            }));
-                          },
-                          child: SvgPicture.asset("assets/JPImages/profileImages/taj.svg")),
-                      SizedBox(height: mQuery.size.height * 0.016),
-                      Row(
-                        children: [
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                "companyName",
-                                style: TextStyle(
-                                  color: Colors.white,
-                                  fontFamily: 'SatoshiBold',
-                                ),
-                              ),
-                              SizedBox(height: mQuery.size.height * 0.016),
-                              Row(
-                                children: [
-                                  Column(
-                                    crossAxisAlignment: CrossAxisAlignment.start,
-                                    children: [
-                                      Row(
-                                        children: [
-                                          Image.asset("assets/JPImages/profileImages/Location.png"),
-                                          SizedBox(width: mQuery.size.width * 0.02),
-                                          Text(
-                                            "Mumbai, U.K, India",
-                                            style: TextStyle(color: Colors.white, fontSize: 12,
-                                                fontFamily: 'SatoshiMedium'),
-                                          )
-                                        ],
-                                      ),
-                                      Row(
-                                        children: [
-                                          Image.asset("assets/JPImages/profileImages/Mail.png"),
-                                          SizedBox(width: mQuery.size.width * 0.02),
-                                          Text(
-                                            "help@taj.com",
-                                            style: TextStyle(color: Colors.white,
-                                                fontFamily: "SatoshiMedium"
-                                                ,fontSize: 12),
-                                          )
-                                        ],
-                                      ),
-                                      Row(
-                                        children: [
-                                          Image.asset("assets/JPImages/profileImages/Mail.png"),
-                                          SizedBox(width: mQuery.size.width * 0.02),
-                                          Text("+91 7302622997",
-                                            style: TextStyle(color: Colors.white, fontSize: 12,
-                                                fontFamily: "SatoshiMedium"),
-                                          )
-                                        ],
-                                      )
-                                    ],
-                                  ),
-                                ],
-                              )
-                            ],
-                          ),
-                          Expanded(child: SizedBox()),
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.end,
-                            children: [
-                              Text(
-                                "Profile Score",
-                                style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 12,
-                                  fontFamily: 'SatoshiMedium',
-                                ),
-                              ),
-                              Text(
-                                "10%",
-                                style: TextStyle(
-                                  fontSize: 18,
-                                  fontFamily: 'SatoshiBold',
-                                  color: Color(0xffFC4646),
-                                ),
-                              ),
-                              SizedBox(height: mQuery.size.height * 0.02),
-                              Container(
-                                width: 125,
-                                height: 30,
-                                padding: EdgeInsets.symmetric(horizontal: mQuery.size.width * 0.03),
-                                decoration: BoxDecoration(
-                                  color: Colors.purpleAccent.shade200,
-                                  image: DecorationImage(
-                                    fit: BoxFit.fill,
-                                    image: AssetImage("assets/JPImages/kycImages/purpleBg.jpeg"),
-                                  ),
-                                  borderRadius: BorderRadius.circular(8),
-                                ),
-                                child: Row(
+                      SizedBox(height: mQuery.size.height * 0.03),
+                      Padding(
+                        padding: EdgeInsets.symmetric(horizontal: mQuery.size.width * 0.045),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Row(
+                              children: [
+                                SvgPicture.asset("assets/JPImages/kycImages/ArrowBack.svg"),
+                                Expanded(child: SizedBox()),
+                                SvgPicture.asset("assets/JPImages/profileImages/shareIcon.svg"),
+                                SizedBox(width: mQuery.size.width * 0.04),
+                                SvgPicture.asset("assets/JPImages/profileImages/settingIcon.svg"),
+                              ],
+                            ),
+                            GestureDetector(
+                                onTap: ()
+                                {
+                                  Navigator.push(context, MaterialPageRoute(builder: (context){
+                                    return CompanyProfilePage(index: 1,);
+                                  }));
+                                },
+                                child: Image.asset("assets/Components/taj.png",
+                                 width: mQuery.size.width*0.16,)),
+                            SizedBox(height: mQuery.size.height * 0.016),
+                            Row(
+                              children: [
+                                Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
-                                    Image.asset("assets/JPImages/profileImages/Eye.png"),
-                                    Expanded(child: SizedBox()),
                                     Text(
-                                      "Preview Profile",
-                                      style: TextStyle(color: Colors.white, fontFamily: 'SatoshiMedium', fontSize: 11),
+                                      "companyName",
+                                      style: TextStyle(
+                                        color: Colors.white,
+                                        fontFamily: 'RobotoBold',
+                                      ),
+                                    ),
+                                    SizedBox(height: mQuery.size.height * 0.016),
+                                    Row(
+                                      children: [
+                                        Column(
+                                          crossAxisAlignment: CrossAxisAlignment.start,
+                                          children: [
+                                            Row(
+                                              children: [
+                                                Image.asset("assets/JPImages/profileImages/Location.png"),
+                                                SizedBox(width: mQuery.size.width * 0.02),
+                                                Text(
+                                                  "Mumbai, U.K, India",
+                                                  style: TextStyle(color: Colors.white, fontSize: 12,
+                                                      fontFamily: 'RobotoMedium'),
+                                                )
+                                              ],
+                                            ),
+                                            Row(
+                                              children: [
+                                                Image.asset("assets/JPImages/profileImages/Mail.png"),
+                                                SizedBox(width: mQuery.size.width * 0.02),
+                                                Text(
+                                                  "help@taj.com",
+                                                  style: TextStyle(color: Colors.white,
+                                                      fontFamily: "RobotoMedium"
+                                                      ,fontSize: 12),
+                                                )
+                                              ],
+                                            ),
+                                            Row(
+                                              children: [
+                                                Image.asset("assets/JPImages/profileImages/Mail.png"),
+                                                SizedBox(width: mQuery.size.width * 0.02),
+                                                Text("+91 7302622997",
+                                                  style: TextStyle(color: Colors.white, fontSize: 12,
+                                                      fontFamily: "RobotoMedium"),
+                                                )
+                                              ],
+                                            )
+                                          ],
+                                        ),
+                                      ],
                                     )
                                   ],
                                 ),
-                              )
-                            ],
-                          )
-                        ],
-                      )
+                                Expanded(child: SizedBox()),
+                                Column(
+                                  crossAxisAlignment: CrossAxisAlignment.end,
+                                  children: [
+                                    Text(
+                                      "Profile Score",
+                                      style: TextStyle(
+                                        color: Colors.white,
+                                        fontSize: 12,
+                                        fontFamily: 'RobotoMedium',
+                                      ),
+                                    ),
+                                    Text(
+                                      "10%",
+                                      style: TextStyle(
+                                        fontSize: 18,
+                                        fontFamily: 'RobotoBold',
+                                        color: Color(0xffFC4646),
+                                      ),
+                                    ),
+                                    SizedBox(height: mQuery.size.height * 0.02),
+                                    Container(
+                                      width: 125,
+                                      height: 30,
+                                      padding: EdgeInsets.symmetric(horizontal: mQuery.size.width * 0.03),
+                                      decoration: BoxDecoration(
+                                        color: Colors.purpleAccent.shade200,
+                                        image: DecorationImage(
+                                          fit: BoxFit.fill,
+                                          image: AssetImage("assets/JPImages/kycImages/purpleBg.jpeg"),
+                                        ),
+                                        borderRadius: BorderRadius.circular(8),
+                                      ),
+                                      child: Row(
+                                        children: [
+                                          Image.asset("assets/JPImages/profileImages/Eye.png"),
+                                          Expanded(child: SizedBox()),
+                                          Text(
+                                            "Preview Profile",
+                                            style: TextStyle(color: Colors.white, fontFamily: 'RobotoMedium', fontSize: 11),
+                                          )
+                                        ],
+                                      ),
+                                    )
+                                  ],
+                                )
+                              ],
+                            )
+                          ],
+                        ),
+                      ),
                     ],
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
           ),
           Expanded(
@@ -278,7 +288,7 @@ class _ProfilePageState extends State<ProfilePage> {
                               SizedBox(width: mQuery.size.width * 0.03),
                               Text(
                                 "Complete Your KYC for ODC* ",
-                                style: TextStyle(color: Color(0xff150B3D), fontFamily: 'SatoshiBold'),
+                                style: TextStyle(color: Color(0xff150B3D), fontFamily: 'RobotoBold'),
                               ),
                               Expanded(child: SizedBox()),
                               Container(
@@ -324,7 +334,7 @@ class _ProfilePageState extends State<ProfilePage> {
                                       SizedBox(width: mQuery.size.width * 0.03),
                                       Text(
                                         "About Hotel",
-                                        style: TextStyle(color: Color(0xff150B3D), fontFamily: 'SatoshiBold'),
+                                        style: TextStyle(color: Color(0xff150B3D), fontFamily: 'RobotoBold'),
                                       ),
                                       // SvgPicture.asset("assets/profileImages/Edit.svg")
                                       Expanded(child: SizedBox()),
@@ -354,7 +364,7 @@ class _ProfilePageState extends State<ProfilePage> {
                                             style: TextStyle(
                                                 fontSize: 12,
                                                 color: Color(0xff524B6B),
-                                                fontFamily: 'SatoshiMedium'
+                                                fontFamily: 'RobotoMedium'
                                             ),)
                                         ],
                                       ),
@@ -370,7 +380,7 @@ class _ProfilePageState extends State<ProfilePage> {
                         Text("Company  Name",style: TextStyle(
                             color: Color(0xff150A33),
                             fontSize: 13,
-                            fontFamily: 'SatoshiMedium'
+                            fontFamily: 'RobotoMedium'
                         ),),
                         SizedBox(height: mQuery.size.height*0.016,),
                         Container(
@@ -394,7 +404,7 @@ class _ProfilePageState extends State<ProfilePage> {
                                 ),
                                 hintStyle: TextStyle(
                                     fontSize: 12,
-                                    fontFamily: 'SatoshiMedium',
+                                    fontFamily: 'RobotoMedium',
                                     color: Color(0xff524B6B)
                                 )
                             ),
@@ -405,7 +415,7 @@ class _ProfilePageState extends State<ProfilePage> {
                         Text("Date of Establishment",style: TextStyle(
                             color: Color(0xff150A33),
                             fontSize: 13,
-                            fontFamily: 'SatoshiMedium'
+                            fontFamily: 'RobotoMedium'
                         ),),
                         SizedBox(height: mQuery.size.height*0.016,),
                         Container(
@@ -424,7 +434,7 @@ class _ProfilePageState extends State<ProfilePage> {
                                   cursorColor: Colors.grey,
                                   style:  TextStyle(
                                     fontSize: 12,
-                                    fontFamily: 'SatoshiMedium',
+                                    fontFamily: 'RobotoMedium',
                                     color: Color(0xff524B6B),
                                   ),
                                   decoration: InputDecoration(
@@ -433,7 +443,7 @@ class _ProfilePageState extends State<ProfilePage> {
                                     contentPadding: EdgeInsets.only(bottom: 13),
                                     hintStyle: TextStyle(
                                       fontSize: 12,
-                                      fontFamily: 'SatoshiMedium',
+                                      fontFamily: 'RobotoMedium',
                                       color: Color(0xff524B6B),
                                     ),
                                   ),
@@ -453,7 +463,7 @@ class _ProfilePageState extends State<ProfilePage> {
                         Text("Official Email",style: TextStyle(
                             color: Color(0xff150A33),
                             fontSize: 13,
-                            fontFamily: 'SatoshiMedium'
+                            fontFamily: 'RobotoMedium'
                         ),),
                         SizedBox(height: mQuery.size.height*0.016,),
                         Container(
@@ -478,7 +488,7 @@ class _ProfilePageState extends State<ProfilePage> {
                                 ),
                                 hintStyle: TextStyle(
                                     fontSize: 12,
-                                    fontFamily: 'SatoshiMedium',
+                                    fontFamily: 'RobotoMedium',
                                     color: Color(0xff524B6B)
                                 )
                             ),
@@ -490,7 +500,7 @@ class _ProfilePageState extends State<ProfilePage> {
                         Text("Phone number",style: TextStyle(
                             color: Color(0xff150A33),
                             fontSize: 13,
-                            fontFamily: 'SatoshiMedium'
+                            fontFamily: 'RobotoMedium'
                         ),),
                         SizedBox(height: mQuery.size.height*0.016,),
                         Container(
@@ -547,7 +557,7 @@ class _ProfilePageState extends State<ProfilePage> {
                                       ),
                                       hintStyle: TextStyle(
                                           fontSize: 12,
-                                          fontFamily: 'SatoshiMedium',
+                                          fontFamily: 'RobotoMedium',
                                           color: Color(0xff524B6B)
                                       ),
                                       counter: SizedBox.shrink()
@@ -562,7 +572,7 @@ class _ProfilePageState extends State<ProfilePage> {
                         Text("Company Website (Optional)",style: TextStyle(
                             color: Color(0xff150A33),
                             fontSize: 13,
-                            fontFamily: 'SatoshiMedium'
+                            fontFamily: 'RobotoMedium'
                         ),),
                         SizedBox(height: mQuery.size.height*0.016,),
                         Container(
@@ -586,7 +596,7 @@ class _ProfilePageState extends State<ProfilePage> {
                                 ),
                                 hintStyle: TextStyle(
                                     fontSize: 12,
-                                    fontFamily: 'SatoshiMedium',
+                                    fontFamily: 'RobotoMedium',
                                     color: Color(0xff524B6B)
                                 )
                             ),
@@ -598,7 +608,7 @@ class _ProfilePageState extends State<ProfilePage> {
                         Text("Location",style: TextStyle(
                             color: Color(0xff150A33),
                             fontSize: 13,
-                            fontFamily: 'SatoshiMedium'
+                            fontFamily: 'RobotoMedium'
                         ),),
                         SizedBox(height: mQuery.size.height*0.016,),
                         Container(
@@ -625,7 +635,7 @@ class _ProfilePageState extends State<ProfilePage> {
                                       ),
                                       hintStyle: TextStyle(
                                           fontSize: 12,
-                                          fontFamily: 'SatoshiMedium',
+                                          fontFamily: 'RobotoMedium',
                                           color: Color(0xff524B6B)
                                       )
                                   ),
@@ -640,7 +650,7 @@ class _ProfilePageState extends State<ProfilePage> {
                         Text("GST",style: TextStyle(
                             color: Color(0xff150A33),
                             fontSize: 13,
-                            fontFamily: 'SatoshiMedium'
+                            fontFamily: 'RobotoMedium'
                         ),),
                         SizedBox(height: mQuery.size.height*0.016,),
                         Container(
@@ -664,7 +674,7 @@ class _ProfilePageState extends State<ProfilePage> {
                                 ),
                                 hintStyle: TextStyle(
                                     fontSize: 12,
-                                    fontFamily: 'SatoshiMedium',
+                                    fontFamily: 'RobotoMedium',
                                     color: Color(0xff524B6B)
                                 )
                             ),
@@ -675,7 +685,7 @@ class _ProfilePageState extends State<ProfilePage> {
                         Text("PAN (Optional) ",style: TextStyle(
                             color: Color(0xff150A33),
                             fontSize: 13,
-                            fontFamily: 'SatoshiMedium'
+                            fontFamily: 'RobotoMedium'
                         ),),
                         SizedBox(height: mQuery.size.height*0.016,),
                         Container(
@@ -699,7 +709,7 @@ class _ProfilePageState extends State<ProfilePage> {
                                 ),
                                 hintStyle: TextStyle(
                                     fontSize: 12,
-                                    fontFamily: 'SatoshiMedium',
+                                    fontFamily: 'RobotoMedium',
                                     color: Color(0xff524B6B)
                                 )
                             ),

@@ -1,7 +1,9 @@
 import 'package:daily_lancers/Auth/SignUp.dart';
 import 'package:daily_lancers/Auth/forgot.dart';
+import 'package:daily_lancers/BotNav.dart';
 import 'package:daily_lancers/HomePage/HomePage.dart';
 import 'package:daily_lancers/JobPoster/JP_Auth/login.dart';
+import 'package:daily_lancers/main.dart';
 
 import 'package:flutter/material.dart';
 
@@ -346,12 +348,10 @@ class _SignUpIndivState extends State<SignUpIndiv> {
               ),
               GestureDetector(
                 onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) =>
-                            Home()), // Replace SecondPage with the actual widget representing the second page
-                  );
+                  Navigator.push(context, MaterialPageRoute(builder: (context){
+                    store.write("ankit", "signupIndv");
+                    return BotNav();
+                  }));
                 },
                 child: Container(
                   width: 266,
@@ -403,12 +403,10 @@ class _SignUpIndivState extends State<SignUpIndiv> {
                   SizedBox(width: 5.0),
                   GestureDetector(
                     onTap: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) =>
-                                const JpLogin()), // Replace SecondPage with the actual widget representing the second page
-                      );
+                      Navigator.push(context, MaterialPageRoute(builder: (context){
+                        (store.read("ankit") == "signinIndv");
+                        return JpLogin();
+                      }));
                     },
                     child: const Text(
                       "Sign in",

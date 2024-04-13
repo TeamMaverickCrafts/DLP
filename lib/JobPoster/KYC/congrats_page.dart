@@ -49,7 +49,7 @@ class _CongratsPageState extends State<CongratsPage> {
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 20,
-                      fontFamily: 'SatoshiBold',
+                      fontFamily: 'RobotoBold',
                     ),
                   ),
                 ),
@@ -60,7 +60,7 @@ class _CongratsPageState extends State<CongratsPage> {
                     style: TextStyle(
                       color: Color(0xff71F68E),
                       fontSize: 20,
-                      fontFamily: 'SatoshiBold',
+                      fontFamily: 'RobotoBold',
                     ),
                   ),
                 ),
@@ -85,14 +85,14 @@ class _CongratsPageState extends State<CongratsPage> {
                         child: Text("Successful",style: TextStyle(
                             color: Color(0xff3A3452),
                             fontSize: 16,
-                            fontFamily: 'SatoshiBold'
+                            fontFamily: 'RobotoBold'
                         ),),
                       ),
                       SizedBox(height: mQuery.size.height*0.023,),
                       Center(
                         child: Text("Congratulations, Documents Verified",style: TextStyle(
                             fontSize: 12,
-                            fontFamily: 'SatoshiRegular',
+                            fontFamily: 'RobotoRegular',
                             color: Color(0xff524B6B)
                         ),),
                       ),
@@ -113,7 +113,7 @@ class _CongratsPageState extends State<CongratsPage> {
                               child: Center(
                                 child: Text("GO TO HOMEPAGE",style: TextStyle(
                                     color: Color(0xff130160),
-                                    fontFamily: 'SatoshiBold'
+                                    fontFamily: 'RobotoBold'
                                 ),),
                               ),
                             ),
@@ -128,7 +128,7 @@ class _CongratsPageState extends State<CongratsPage> {
                               child: Center(
                                 child: Text("CHECK PROFILE",style: TextStyle(
                                     color: Colors.white,
-                                    fontFamily: 'SatoshiBold'
+                                    fontFamily: 'RobotoBold'
                                 ),),
                               ),
                             )

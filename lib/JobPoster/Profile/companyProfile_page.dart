@@ -1,9 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:badges/badges.dart' as badges;
 
 class CompanyProfilePage extends StatefulWidget {
-  const CompanyProfilePage({super.key});
+  const CompanyProfilePage({super.key, required int index});
 
   @override
   State<CompanyProfilePage> createState() => _CompanyProfilePageState();
@@ -61,32 +62,61 @@ class _CompanyProfilePageState extends State<CompanyProfilePage> {
                   ),
                 ),
                 SizedBox(height: mQuery.size.height * 0.033),
-                Stack(
-                  children: [
-                    Container(
-                      width: double.infinity,
-                      height: 115,
-                      color: Color(0xffF2F2F2),
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Text(
-                            "${companyData["hotel"]}",
-                            style: TextStyle(
-                              fontSize: 18,
-                              fontFamily: 'SatoshiBold',
-                              color: Color(0xff0D0140),
-                            ),
+
+
+                badges.Badge(
+                  position: badges.BadgePosition.bottomStart(
+                    bottom: mQuery.size.height*0.1,
+                    start: mQuery.size.width*0.4
+                  ),
+                  badgeContent: Image.asset("assets/Components/taj.png",
+                    width: mQuery.size.width*0.16,
+                  ),
+                  child: Container(
+                    width: double.infinity,
+                    height: 115,
+                    color: Color(0xffF2F2F2),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(
+                          "${companyData["hotel"]}",
+                          style: TextStyle(
+                            fontSize: 18,
+                            fontFamily: 'RobotoBold',
+                            color: Color(0xff0D0140),
                           ),
-                        ],
-                      ),
+                        ),
+                      ],
                     ),
-                    Positioned(
-                      bottom: 80,
-                        left: 135,
-                        child: Image.asset("assets/JPImages/profileImages/tajImage.png")),
-                  ],
+                  ),
                 ),
+                // Stack(
+                //   children: [
+                //     Container(
+                //       width: double.infinity,
+                //       height: 115,
+                //       color: Color(0xffF2F2F2),
+                //       child: Column(
+                //         mainAxisAlignment: MainAxisAlignment.center,
+                //         children: [
+                //           Text(
+                //             "${companyData["hotel"]}",
+                //             style: TextStyle(
+                //               fontSize: 18,
+                //               fontFamily: 'RobotoBold',
+                //               color: Color(0xff0D0140),
+                //             ),
+                //           ),
+                //         ],
+                //       ),
+                //     ),
+                //     Positioned(
+                //       bottom: 80,
+                //         left: 135,
+                //         child: Image.asset("assets/JPImages/profileImages/tajImage.png")),
+                //   ],
+                // ),
                 SizedBox(height: mQuery.size.height * 0.02),
                 Padding(
                   padding: EdgeInsets.symmetric(horizontal: mQuery.size.width * 0.045),
@@ -110,7 +140,7 @@ class _CompanyProfilePageState extends State<CompanyProfilePage> {
                                     TextSpan(
                                       text: "ODC Posted - ",
                                       style: TextStyle(
-                                        fontFamily: 'SatoshiBold',
+                                        fontFamily: 'RobotoBold',
                                         fontSize: 12,
                                         color: Color(0xff4CAF50),
                                       ),
@@ -119,7 +149,7 @@ class _CompanyProfilePageState extends State<CompanyProfilePage> {
                                       text: "${companyData["odcValue"]}",
                                       style: TextStyle(
                                         fontSize: 15,
-                                        fontFamily: 'SatoshiBold',
+                                        fontFamily: 'RobotoBold',
                                         color: Color(0xff4CAF50),
                                       ),
                                     )
@@ -144,7 +174,7 @@ class _CompanyProfilePageState extends State<CompanyProfilePage> {
                                   "Visit website",
                                   style: TextStyle(
                                     color: Color(0xffFF9228),
-                                    fontFamily: 'SatoshiBold',
+                                    fontFamily: 'RobotoBold',
                                     fontSize: 12,
                                   ),
                                 )
@@ -159,7 +189,7 @@ class _CompanyProfilePageState extends State<CompanyProfilePage> {
                           color: Colors.white,
                           borderRadius: BorderRadius.circular(10),
                         ),
-                        padding: EdgeInsets.symmetric(horizontal: 4, vertical: 3),
+                        padding: EdgeInsets.symmetric(horizontal: 2, vertical: 3),
                         child: CupertinoSegmentedControl(
                           borderColor: Colors.white,
                           children: {
@@ -174,7 +204,7 @@ class _CompanyProfilePageState extends State<CompanyProfilePage> {
                                 child: Text(
                                   "About Us",
                                   style: TextStyle(
-                                    fontFamily: 'SatoshiBold',
+                                    fontFamily: 'RobotoBold',
                                     color: _currentText == "About Us" ? Colors.white : Colors.black,
                                   ),
                                 ),
@@ -192,7 +222,7 @@ class _CompanyProfilePageState extends State<CompanyProfilePage> {
                                   "Post",
                                   style: TextStyle(
                                     color: _currentText == "Post" ? Colors.white : Colors.black,
-                                    fontFamily: 'SatoshiBold',
+                                    fontFamily: 'RobotoBold',
                                   ),
                                 ),
                               ),
@@ -209,7 +239,7 @@ class _CompanyProfilePageState extends State<CompanyProfilePage> {
                                   "Jobs",
                                   style: TextStyle(
                                     color: _currentText == "Jobs" ? Colors.white : Colors.black,
-                                    fontFamily: 'SatoshiBold',
+                                    fontFamily: 'RobotoBold',
                                   ),
                                 ),
                               ),
@@ -257,7 +287,7 @@ class _CompanyProfilePageState extends State<CompanyProfilePage> {
                 SizedBox(width: 6,),
                 Text("${companyData["likeNo"]}", style: TextStyle(
                     fontSize: 10,
-                    fontFamily: 'SatoshiMedium',
+                    fontFamily: 'RobotoMedium',
                     color: Color(0xff6F6B80)
                 ),),
                 Expanded(child: SizedBox()),
@@ -267,7 +297,7 @@ class _CompanyProfilePageState extends State<CompanyProfilePage> {
                 Text("${companyData["shareNo"]}", style: TextStyle(
                     fontSize: 10,
                     color: Color(0xff6F6B80),
-                    fontFamily: 'SatoshiMedium'
+                    fontFamily: 'RobotoMedium'
                 ),)
               ],
             ),
@@ -285,19 +315,19 @@ class _CompanyProfilePageState extends State<CompanyProfilePage> {
         // the above content will show when the About us will be selelected
         Text("About Hotel", style: TextStyle(
             color: Color(0xff150B3D),
-            fontFamily: 'SatoshiBold'
+            fontFamily: 'RobotoBold'
         ),),
         SizedBox(height: 16,),
         Text("Built in 1973, the iconic The Taj Hotel Mumbai stands majestically across from the Gateway of India, overlooking the Arabian Sea. The Tower stands in harmonious contrast to The Taj Mahal Palace with its arched balconies and newly refurbished rooms. Sprawling over 2.6 acres, this luxurious hotel features 10 restaurants and a variety of traditional Indian therapies at Jiva Spa.",
           style: TextStyle(
               fontSize: 12,
-              fontFamily: 'SatoshiMedium',
+              fontFamily: 'RobotoMedium',
               color: Color(0xff524B6B)
           ),),
         SizedBox(height: 30,),
         Text("Contacts", style: TextStyle(
             color: Color(0xff150B3D),
-            fontFamily: 'SatoshiBold'
+            fontFamily: 'RobotoBold'
         ),),
         SizedBox(height: 16,),
         Row(
@@ -306,7 +336,7 @@ class _CompanyProfilePageState extends State<CompanyProfilePage> {
             SizedBox(width: 23,),
             Text("${companyData["mobileNo"]}", style: TextStyle(
                 fontSize: 12,
-                fontFamily: 'SatoshiMedium',
+                fontFamily: 'RobotoMedium',
                 color: Color(0xff524B6B)
             ),)
           ],
@@ -317,7 +347,7 @@ class _CompanyProfilePageState extends State<CompanyProfilePage> {
             SizedBox(width: 23,),
             Text("${companyData["email"]}", style: TextStyle(
                 fontSize: 12,
-                fontFamily: 'SatoshiMedium',
+                fontFamily: 'RobotoMedium',
                 color: Color(0xff524B6B)
             ),)
           ],
@@ -325,24 +355,24 @@ class _CompanyProfilePageState extends State<CompanyProfilePage> {
         SizedBox(height: 30,),
         Text("GSTIN", style: TextStyle(
             color: Color(0xff150B3D),
-            fontFamily: 'SatoshiBold'
+            fontFamily: 'RobotoBold'
         ),),
         SizedBox(height: 16,),
         Text("${companyData["gstin"]}", style: TextStyle(
             fontSize: 12,
-            fontFamily: 'SatoshiMedium',
+            fontFamily: 'RobotoMedium',
             color: Color(0xff524B6B)
         )),
 
         SizedBox(height: 30,),
         Text("Location", style: TextStyle(
             color: Color(0xff150B3D),
-            fontFamily: 'SatoshiBold'
+            fontFamily: 'RobotoBold'
         ),),
         SizedBox(height: 16,),
         Text("${companyData["location"]}", style: TextStyle(
             fontSize: 12,
-            fontFamily: 'SatoshiMedium',
+            fontFamily: 'RobotoMedium',
             color: Color(0xff524B6B)
         )),
         SizedBox(height: 16,),
@@ -353,7 +383,7 @@ class _CompanyProfilePageState extends State<CompanyProfilePage> {
         SizedBox(height: 30,),
         Text("Hotel Gallery", style: TextStyle(
             color: Color(0xff150B3D),
-            fontFamily: 'SatoshiBold'
+            fontFamily: 'RobotoBold'
         ),),
         SizedBox(height: 16,),
         Row(
@@ -393,7 +423,7 @@ class _CompanyProfilePageState extends State<CompanyProfilePage> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text("Hotel Taj", style: TextStyle(
-                            fontFamily: 'SatoshiBold',
+                            fontFamily: 'RobotoBold',
                             fontSize: 12,
                             color: Color(0xff150B3D)
                         ),),
@@ -404,7 +434,7 @@ class _CompanyProfilePageState extends State<CompanyProfilePage> {
                             SizedBox(width: 10,),
                             Text("21 minuts ago", style: TextStyle(
                                 fontSize: 10,
-                                fontFamily: 'SatoshiMedium',
+                                fontFamily: 'RobotoMedium',
                                 color: Color(0xffAAA6B9)
                             ),),
                           ],
@@ -419,14 +449,14 @@ class _CompanyProfilePageState extends State<CompanyProfilePage> {
                         TextSpan(text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco labo... ",
                             style: TextStyle(
                                 fontSize: 12,
-                                fontFamily: 'SatoshiMedium',
+                                fontFamily: 'RobotoMedium',
                                 color: Color(0xff524B6B)
                             )
                         ),
                         TextSpan(text: "Read More",
                             style: TextStyle(
                                 fontSize: 12,
-                                fontFamily: 'SatoshiMedium',
+                                fontFamily: 'RobotoMedium',
                                 color: Color(0xffFF9228)
                             )
                         ),
@@ -442,13 +472,13 @@ class _CompanyProfilePageState extends State<CompanyProfilePage> {
                 SizedBox(height: 20,),
                 Text("What's it like to work at Taj?", style: TextStyle(
                     fontSize: 12,
-                    fontFamily: 'SatoshiBold',
+                    fontFamily: 'RobotoBold',
                     color: Color(0xff150B3D)
                 ),),
                 Text("Youtube.com", style: TextStyle(
                     fontSize: 10,
                     color: Color(0xff150B3D),
-                    fontFamily: 'SatoshiMedium'
+                    fontFamily: 'RobotoMedium'
                 ),)
               ],
             ),
@@ -487,12 +517,12 @@ class _CompanyProfilePageState extends State<CompanyProfilePage> {
                           children: [
                             Text("Chef-Chinese", style: TextStyle(
                                 color: Color(0xff150B3D),
-                                fontFamily: 'SatoshiBold'
+                                fontFamily: 'RobotoBold'
                             ),),
                             Text("Taj Hotel . Mumbai", style: TextStyle(
                                 fontSize: 12,
                                 color: Color(0xff524B6B),
-                                fontFamily: 'SatoshiMedium'
+                                fontFamily: 'RobotoMedium'
                             ),)
                           ],
                         )
@@ -513,7 +543,7 @@ class _CompanyProfilePageState extends State<CompanyProfilePage> {
                         Text("03/05", style: TextStyle(
                             color: Color(0xff524B6B),
                             fontSize: 12,
-                            fontFamily: 'SatoshiMedium'
+                            fontFamily: 'RobotoMedium'
                         ),),
                         SizedBox(width: 32,),
                         SvgPicture.asset("assets/JPImages/profileImages/calendor2.svg"),
@@ -521,7 +551,7 @@ class _CompanyProfilePageState extends State<CompanyProfilePage> {
                         Text("10 October", style: TextStyle(
                             color: Color(0xff524B6B),
                             fontSize: 12,
-                            fontFamily: 'SatoshiMedium'
+                            fontFamily: 'RobotoMedium'
                         ),),
                       ],
                     ),
@@ -534,7 +564,7 @@ class _CompanyProfilePageState extends State<CompanyProfilePage> {
                         Text("12:00 pm", style: TextStyle(
                             color: Color(0xff524B6B),
                             fontSize: 12,
-                            fontFamily: 'SatoshiMedium'
+                            fontFamily: 'RobotoMedium'
                         ),),
                         SizedBox(width: 18,),
                         SvgPicture.asset("assets/JPImages/profileImages/available.svg"),
@@ -542,7 +572,7 @@ class _CompanyProfilePageState extends State<CompanyProfilePage> {
                         Text("Availabe", style: TextStyle(
                             color: Color(0xff524B6B),
                             fontSize: 12,
-                            fontFamily: 'SatoshiMedium'
+                            fontFamily: 'RobotoMedium'
                         ),),
                       ],
                     ),
@@ -568,11 +598,11 @@ class _CompanyProfilePageState extends State<CompanyProfilePage> {
                     Text("By Hotel", style: TextStyle(
                         fontSize: 12,
                         color: Color(0xff524B6B),
-                        fontFamily: 'SatoshiMedium'
+                        fontFamily: 'RobotoMedium'
                     ),),
                     Expanded(child: SizedBox()),
                     Text("₹2K/Hr", style: TextStyle(
-                        fontFamily: 'SatoshiMedium'
+                        fontFamily: 'RobotoMedium'
                     ),)
                   ],
                 ),
@@ -607,12 +637,12 @@ class _CompanyProfilePageState extends State<CompanyProfilePage> {
                           children: [
                             Text("Waiter", style: TextStyle(
                                 color: Color(0xff150B3D),
-                                fontFamily: 'SatoshiBold'
+                                fontFamily: 'RobotoBold'
                             ),),
                             Text("Taj Hotel . Mumbai", style: TextStyle(
                                 fontSize: 12,
                                 color: Color(0xff524B6B),
-                                fontFamily: 'SatoshiMedium'
+                                fontFamily: 'RobotoMedium'
                             ),)
                           ],
                         )
@@ -633,7 +663,7 @@ class _CompanyProfilePageState extends State<CompanyProfilePage> {
                         Text("03/05", style: TextStyle(
                             color: Color(0xff524B6B),
                             fontSize: 12,
-                            fontFamily: 'SatoshiMedium'
+                            fontFamily: 'RobotoMedium'
                         ),),
                         SizedBox(width: 32,),
                         SvgPicture.asset("assets/JPImages/profileImages/calendor2.svg"),
@@ -641,7 +671,7 @@ class _CompanyProfilePageState extends State<CompanyProfilePage> {
                         Text("10 October", style: TextStyle(
                             color: Color(0xff524B6B),
                             fontSize: 12,
-                            fontFamily: 'SatoshiMedium'
+                            fontFamily: 'RobotoMedium'
                         ),),
                       ],
                     ),
@@ -654,7 +684,7 @@ class _CompanyProfilePageState extends State<CompanyProfilePage> {
                         Text("12:00 pm", style: TextStyle(
                             color: Color(0xff524B6B),
                             fontSize: 12,
-                            fontFamily: 'SatoshiMedium'
+                            fontFamily: 'RobotoMedium'
                         ),),
                         SizedBox(width: 18,),
                         SvgPicture.asset("assets/JPImages/profileImages/available.svg"),
@@ -662,7 +692,7 @@ class _CompanyProfilePageState extends State<CompanyProfilePage> {
                         Text("Availabe", style: TextStyle(
                             color: Color(0xff524B6B),
                             fontSize: 12,
-                            fontFamily: 'SatoshiMedium'
+                            fontFamily: 'RobotoMedium'
                         ),),
                       ],
                     ),
@@ -688,11 +718,11 @@ class _CompanyProfilePageState extends State<CompanyProfilePage> {
                     Text("By Hotel", style: TextStyle(
                         fontSize: 12,
                         color: Color(0xff524B6B),
-                        fontFamily: 'SatoshiMedium'
+                        fontFamily: 'RobotoMedium'
                     ),),
                     Expanded(child: SizedBox()),
                     Text("₹2K/Hr", style: TextStyle(
-                        fontFamily: 'SatoshiMedium'
+                        fontFamily: 'RobotoMedium'
                     ),)
                   ],
                 ),
