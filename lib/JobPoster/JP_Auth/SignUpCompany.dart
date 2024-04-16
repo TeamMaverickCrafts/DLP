@@ -2,6 +2,7 @@ import 'package:daily_lancers/Auth/SignUp.dart';
 import 'package:daily_lancers/Auth/forgot.dart';
 import 'package:daily_lancers/HomePage/HomePage.dart';
 import 'package:daily_lancers/JobPoster/JP_Auth/login.dart';
+import 'package:daily_lancers/JobPoster/JP_Botnav.dart';
 import 'package:daily_lancers/main.dart';
 
 import 'package:flutter/material.dart';
@@ -491,10 +492,10 @@ class _SignUpCompanyState extends State<SignUpCompany> {
               ),
               GestureDetector(
                 onTap: () {
-                 Navigator.push(context, MaterialPageRoute(builder: (context){
-                   store.write("ankit", "signup");
-                   return BotNav();
-                 }));
+                  Navigator.push(context, MaterialPageRoute(builder: (context) {
+                    store.write("ankit", "signup");
+                    return JP_BotNav();
+                  }));
                 },
                 child: Container(
                   width: 266,
@@ -546,7 +547,8 @@ class _SignUpCompanyState extends State<SignUpCompany> {
                   SizedBox(width: 5.0),
                   GestureDetector(
                     onTap: () {
-                      Navigator.push(context, MaterialPageRoute(builder: (context){
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) {
                         store.write("ankit", "signin");
                         return JpLogin();
                       }));

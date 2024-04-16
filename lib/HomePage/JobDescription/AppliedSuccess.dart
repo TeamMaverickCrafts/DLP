@@ -1,3 +1,4 @@
+import 'package:daily_lancers/BotNav.dart';
 import 'package:daily_lancers/HomePage/HomePage.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
@@ -56,11 +57,11 @@ class _AppliedSuccessfulState extends State<AppliedSuccessful> {
             ),
             ElevatedButton(
               onPressed: () {
-                Navigator.push(
+                Navigator.pushReplacement(
                   context,
                   MaterialPageRoute(
                       builder: (context) =>
-                          Home()), // Replace SecondPage with the actual widget representing the second page
+                          BotNav()), // Replace SecondPage with the actual widget representing the second page
                 );
               },
               style: ElevatedButton.styleFrom(

@@ -1,8 +1,12 @@
 import 'package:daily_lancers/AppSettings/Settings.dart';
 import 'package:daily_lancers/HomePage/HomePage.dart';
 import 'package:daily_lancers/HomePage/JobDescription/Job_Description.dart';
+import 'package:daily_lancers/Profile/Components/AboutMe.dart';
+import 'package:daily_lancers/Profile/Components/AddWorkExp.dart';
 import 'package:daily_lancers/Profile/EditProfile.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class profile extends StatefulWidget {
@@ -14,6 +18,20 @@ class profile extends StatefulWidget {
 
 class _profileState extends State<profile> {
   int _currentIndex = 1;
+  String _aboutMe = '';
+  void _editAboutMe() async {
+    final newText = await Navigator.of(context).push<String>(
+      MaterialPageRoute(
+          builder: (context) => EditAboutMePage(initialText: _aboutMe)),
+    );
+
+    if (newText != null) {
+      setState(() {
+        _aboutMe = newText;
+      });
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     // make scrolling interactive
@@ -61,33 +79,59 @@ class _profileState extends State<profile> {
                   const SizedBox(
                     height: 15,
                   ),
-                  Container(
-                    height: 80,
-                    decoration: const BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.all(Radius.circular(20))),
-                    child: Padding(
-                      padding: const EdgeInsets.all(15.0),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Row(
-                            children: [
-                              SvgPicture.asset('assets/profile/2.svg'),
-                              const SizedBox(
-                                width: 10,
-                              ),
-                              const Text(
-                                'About me',
-                                style: TextStyle(
-                                  fontFamily: 'RobotoBold',
-                                  fontSize: 14,
+                  GestureDetector(
+                    onTap: _editAboutMe,
+                    child: Container(
+                      decoration: const BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.all(Radius.circular(20))),
+                      child: Padding(
+                        padding: const EdgeInsets.all(15.0),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Column(
+                              children: [
+                                Row(
+                                  children: [
+                                    SvgPicture.asset('assets/profile/2.svg'),
+                                    const SizedBox(
+                                      width: 10,
+                                    ),
+                                    const Text(
+                                      'About me',
+                                      style: TextStyle(
+                                        fontFamily: 'RobotoBold',
+                                        fontSize: 14,
+                                      ),
+                                    ),
+                                    // _aboutMe.isEmpty
+                                    //     ? const Text(
+                                    //         "Add a description about yourself")
+                                    //     : Text(_aboutMe),
+                                  ],
                                 ),
-                              )
-                            ],
-                          ),
-                          SvgPicture.asset('assets/profile/Add.svg'),
-                        ],
+                                //show the data here aftter setting someting in about me page and
+                                Divider(
+                                  color: Colors.black,
+                                  thickness: 1.0,
+                                ),
+                                Text(
+                                  _aboutMe,
+                                  style: TextStyle(
+                                    fontFamily: 'RobotoMedium',
+                                    color: Color(0xFF524B6B),
+                                  ),
+                                ),
+                              ],
+                            ),
+                            SvgPicture.asset(
+                              _aboutMe.isEmpty
+                                  ? 'assets/profile/Add.svg'
+                                  : 'assets/profile/Edit.svg',
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                   ),
@@ -119,7 +163,18 @@ class _profileState extends State<profile> {
                               )
                             ],
                           ),
-                          SvgPicture.asset('assets/profile/Add.svg'),
+                          GestureDetector(
+                              onTap: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => AddWorkExp(
+                                            initialText: '',
+                                          )),
+                                );
+                              },
+                              child:
+                                  SvgPicture.asset('assets/profile/Add.svg')),
                         ],
                       ),
                     ),
@@ -350,13 +405,13 @@ class _profileState extends State<profile> {
                         ),
                         GestureDetector(
                           onTap: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) =>
-                                    const Settings()), // Replace NextPage with your desired page
-                          );
-                        },
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) =>
+                                      const Settings()), // Replace NextPage with your desired page
+                            );
+                          },
                           child: SvgPicture.asset(
                             "assets/profile/Settings.svg",
                             height: 25.0,

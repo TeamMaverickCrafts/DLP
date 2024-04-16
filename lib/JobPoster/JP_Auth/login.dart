@@ -2,6 +2,7 @@ import 'package:daily_lancers/Auth/SignUp.dart';
 import 'package:daily_lancers/Auth/forgot.dart';
 import 'package:daily_lancers/BotNav.dart';
 import 'package:daily_lancers/HomePage/HomePage.dart';
+import 'package:daily_lancers/JobPoster/JP_Botnav.dart';
 
 import 'package:flutter/material.dart';
 
@@ -249,7 +250,7 @@ class _JpLoginState extends State<JpLogin> {
                     context,
                     MaterialPageRoute(
                         builder: (context) =>
-                            BotNav()), // Replace SecondPage with the actual widget representing the second page
+                            JP_BotNav()), // Replace SecondPage with the actual widget representing the second page
                   );
                 },
                 child: Container(

@@ -6,18 +6,27 @@ import 'package:flutter_svg/flutter_svg.dart';
 
 import 'package:daily_lancers/HomePage/JobDescription/grids.dart';
 
-class ItemDetailsPage extends StatefulWidget {
+class JobPreview extends StatefulWidget {
   final int index;
 
-  const ItemDetailsPage({Key? key, required this.index}) : super(key: key);
+  const JobPreview({Key? key, required this.index}) : super(key: key);
 
   @override
-  State<ItemDetailsPage> createState() => _ItemDetailsPageState();
+  State<JobPreview> createState() => _JobPreviewState();
 }
 
-class _ItemDetailsPageState extends State<ItemDetailsPage> {
+class _JobPreviewState extends State<JobPreview> {
+  String currentContent = "description"; // Initial content is description
+
+  void changeContent(String newContent) {
+    setState(() {
+      currentContent = newContent;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
+    Widget contentWidget = _buildDescriptionContent();
     return Scaffold(
       backgroundColor: const Color(0xFFF9F9F9),
       body: Container(
@@ -174,6 +183,7 @@ class _ItemDetailsPageState extends State<ItemDetailsPage> {
                                     MediaQuery.of(context).size.height * 0.053,
                                 child: ElevatedButton(
                                   onPressed: () {
+                                    changeContent("description");
                                     print('Description Button Pressed');
                                   },
                                   style: ElevatedButton.styleFrom(
@@ -200,6 +210,7 @@ class _ItemDetailsPageState extends State<ItemDetailsPage> {
                                     MediaQuery.of(context).size.height * 0.053,
                                 child: ElevatedButton(
                                   onPressed: () {
+                                    changeContent("hotelInfo");
                                     print('Hotel Info Button Pressed');
                                   },
                                   style: ElevatedButton.styleFrom(
@@ -225,144 +236,7 @@ class _ItemDetailsPageState extends State<ItemDetailsPage> {
                           SizedBox(
                             height: MediaQuery.of(context).size.height * 0.05,
                           ),
-                          const Row(
-                            children: [
-                              Text(
-                                "Job Description",
-                                style: TextStyle(
-                                  color: Color(0xff0D0140),
-                                  fontSize: 18,
-                                  fontFamily: "RobotoBold",
-                                  height: 1.0,
-                                ),
-                              ),
-                            ],
-                          ),
-                          SizedBox(
-                            height: MediaQuery.of(context).size.height * 0.02,
-                          ),
-                          Text(
-                            demoData[widget.index]['jobdesc'],
-                            style: const TextStyle(
-                              color: Color(0xff524B6B),
-                              fontSize: 14,
-                              fontFamily: "RobotoRegular",
-                              height: 1.5,
-                            ),
-                          ),
-                          SizedBox(
-                            height: MediaQuery.of(context).size.height * 0.03,
-                          ),
-                          Padding(
-                            padding: EdgeInsets.only(
-                              left: MediaQuery.of(context).size.width * 0.05,
-                            ),
-                            child: Column(
-                              children: [
-                                Row(
-                                  mainAxisAlignment: MainAxisAlignment.start,
-                                  children: [
-                                    const EachGrid(
-                                      svgPath: 'assets/profile/stipened.svg',
-                                      title: 'Stipend',
-                                      subtitle: '₹2500/Hr',
-                                    ),
-                                    SizedBox(
-                                      width: MediaQuery.of(context).size.width *
-                                          0.15,
-                                    ),
-                                    const EachGrid(
-                                      svgPath: 'assets/profile/jobtype.svg',
-                                      title: 'Job Type',
-                                      subtitle: 'Chef/Cook',
-                                    ),
-                                  ],
-                                ),
-                                SizedBox(
-                                  height:
-                                      MediaQuery.of(context).size.height * 0.03,
-                                ),
-                                Row(
-                                  mainAxisAlignment: MainAxisAlignment.start,
-                                  children: [
-                                    const EachGrid(
-                                      svgPath: 'assets/profile/gender.svg',
-                                      title: 'Gender',
-                                      subtitle: 'Both',
-                                    ),
-                                    SizedBox(
-                                      width: MediaQuery.of(context).size.width *
-                                          0.15,
-                                    ),
-                                    const EachGrid(
-                                      svgPath: 'assets/profile/trans.svg',
-                                      title: 'Transportation',
-                                      subtitle: 'Provided',
-                                    ),
-                                  ],
-                                ),
-                                SizedBox(
-                                  height:
-                                      MediaQuery.of(context).size.height * 0.03,
-                                ),
-                                Row(
-                                  mainAxisAlignment: MainAxisAlignment.start,
-                                  children: [
-                                    const EachGrid(
-                                      svgPath: 'assets/profile/cal.svg',
-                                      title: 'Available on',
-                                      subtitle: '05 October',
-                                    ),
-                                    SizedBox(
-                                      width: MediaQuery.of(context).size.width *
-                                          0.15,
-                                    ),
-                                    const EachGrid(
-                                      svgPath: 'assets/profile/clock.svg',
-                                      title: 'Timing',
-                                      subtitle: '12:00 to 19:00',
-                                    ),
-                                  ],
-                                ),
-                              ],
-                            ),
-                          ),
-                          SizedBox(
-                            height: MediaQuery.of(context).size.height * 0.04,
-                          ),
-                          const Row(
-                            children: [
-                              Text(
-                                "Location",
-                                style: TextStyle(
-                                  color: Color(0xff0D0140),
-                                  fontSize: 18,
-                                  fontFamily: "RobotoBold",
-                                  height: 1.0,
-                                ),
-                              ),
-                            ],
-                          ),
-                          SizedBox(
-                            height: MediaQuery.of(context).size.height * 0.01,
-                          ),
-                          Row(
-                            children: [
-                              Text(
-                                demoData[widget.index]['main-location'],
-                                style: const TextStyle(
-                                  color: Color(0xff524B6B),
-                                  fontSize: 14,
-                                  fontFamily: "RobotoRegular",
-                                  height: 1.0,
-                                ),
-                              ),
-                            ],
-                          ),
-                          SizedBox(
-                            height: MediaQuery.of(context).size.height * 0.04,
-                          ),
-                          Image.asset("assets/map.png")
+                          contentWidget,
                         ],
                       ),
                     ),
@@ -374,6 +248,166 @@ class _ItemDetailsPageState extends State<ItemDetailsPage> {
         ),
       ),
       bottomNavigationBar: const BottomRow(),
+    );
+  }
+
+  Widget _buildDescriptionContent() {
+    // Build and return description content widget
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        const Row(
+          children: [
+            Text(
+              "Job Description",
+              style: TextStyle(
+                color: Color(0xff0D0140),
+                fontSize: 18,
+                fontFamily: "RobotoBold",
+                height: 1.0,
+              ),
+            ),
+          ],
+        ),
+        SizedBox(
+          height: MediaQuery.of(context).size.height * 0.02,
+        ),
+        Text(
+          demoData[widget.index]['jobdesc'],
+          style: const TextStyle(
+            color: Color(0xff524B6B),
+            fontSize: 14,
+            fontFamily: "RobotoRegular",
+            height: 1.5,
+          ),
+        ),
+        SizedBox(
+          height: MediaQuery.of(context).size.height * 0.03,
+        ),
+        Padding(
+          padding: EdgeInsets.only(
+            left: MediaQuery.of(context).size.width * 0.05,
+          ),
+          child: Column(
+            children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  const EachGrid(
+                    svgPath: 'assets/profile/stipened.svg',
+                    title: 'Stipend',
+                    subtitle: '₹2500/Hr',
+                  ),
+                  SizedBox(
+                    width: MediaQuery.of(context).size.width * 0.15,
+                  ),
+                  const EachGrid(
+                    svgPath: 'assets/profile/jobtype.svg',
+                    title: 'Job Type',
+                    subtitle: 'Chef/Cook',
+                  ),
+                ],
+              ),
+              SizedBox(
+                height: MediaQuery.of(context).size.height * 0.03,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  const EachGrid(
+                    svgPath: 'assets/profile/gender.svg',
+                    title: 'Gender',
+                    subtitle: 'Both',
+                  ),
+                  SizedBox(
+                    width: MediaQuery.of(context).size.width * 0.15,
+                  ),
+                  const EachGrid(
+                    svgPath: 'assets/profile/trans.svg',
+                    title: 'Transportation',
+                    subtitle: 'Provided',
+                  ),
+                ],
+              ),
+              SizedBox(
+                height: MediaQuery.of(context).size.height * 0.03,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  const EachGrid(
+                    svgPath: 'assets/profile/cal.svg',
+                    title: 'Available on',
+                    subtitle: '05 October',
+                  ),
+                  SizedBox(
+                    width: MediaQuery.of(context).size.width * 0.15,
+                  ),
+                  const EachGrid(
+                    svgPath: 'assets/profile/clock.svg',
+                    title: 'Timing',
+                    subtitle: '12:00 to 19:00',
+                  ),
+                ],
+              ),
+            ],
+          ),
+        ),
+        SizedBox(
+          height: MediaQuery.of(context).size.height * 0.04,
+        ),
+        const Row(
+          children: [
+            Text(
+              "Location",
+              style: TextStyle(
+                color: Color(0xff0D0140),
+                fontSize: 18,
+                fontFamily: "RobotoBold",
+                height: 1.0,
+              ),
+            ),
+          ],
+        ),
+        SizedBox(
+          height: MediaQuery.of(context).size.height * 0.01,
+        ),
+        Row(
+          children: [
+            Text(
+              demoData[widget.index]['main-location'],
+              style: const TextStyle(
+                color: Color(0xff524B6B),
+                fontSize: 14,
+                fontFamily: "RobotoRegular",
+                height: 1.0,
+              ),
+            ),
+          ],
+        ),
+        SizedBox(
+          height: MediaQuery.of(context).size.height * 0.04,
+        ),
+        Image.asset("assets/map.png")
+      ],
+    );
+  }
+
+  Widget _buildHotelInfoContent() {
+    // Build and return hotel info content widget
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(
+          "Hotel Info",
+          style: TextStyle(
+            color: Color(0xff0D0140),
+            fontSize: 18,
+            fontFamily: "RobotoBold",
+            height: 1.0,
+          ),
+        ),
+      ],
     );
   }
 }

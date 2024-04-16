@@ -1,5 +1,6 @@
 import 'package:daily_lancers/Auth/SignUp.dart';
 import 'package:daily_lancers/Auth/forgot.dart';
+import 'package:daily_lancers/BotNav.dart';
 import 'package:daily_lancers/HomePage/HomePage.dart';
 
 import 'package:flutter/material.dart';
@@ -248,7 +249,7 @@ class _LoginState extends State<Login> {
                     context,
                     MaterialPageRoute(
                         builder: (context) =>
-                            Home()), // Replace SecondPage with the actual widget representing the second page
+                            BotNav()), // Replace SecondPage with the actual widget representing the second page
                   );
                 },
                 child: Container(

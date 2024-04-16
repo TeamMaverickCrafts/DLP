@@ -40,7 +40,7 @@ class _BotNavState extends State<BotNav> {
         ],
       ),
       bottomNavigationBar: Container(
-        height: 90,
+        height: 110,
         decoration: const BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.only(
@@ -48,87 +48,85 @@ class _BotNavState extends State<BotNav> {
             topRight: Radius.circular(24), // Adjust the top-right radius here
           ),
         ),
-        child: SingleChildScrollView(
-          child: BottomNavigationBar(
-            type: BottomNavigationBarType.fixed,
-            currentIndex: _selectedIndex,
-            onTap: (index) {
-              setState(() {
-                _selectedIndex = index;
-                _pageController.animateToPage(
-                  index,
-                  duration: const Duration(milliseconds: 300),
-                  curve: Curves.ease,
-                );
-              });
-            },
-            items: [
-              BottomNavigationBarItem(
-                icon: SvgPicture.asset(
-                  'assets/Components/BottomNav/1.svg',
+        child: BottomNavigationBar(
+          type: BottomNavigationBarType.fixed,
+          currentIndex: _selectedIndex,
+          onTap: (index) {
+            setState(() {
+              _selectedIndex = index;
+              _pageController.animateToPage(
+                index,
+                duration: const Duration(milliseconds: 300),
+                curve: Curves.ease,
+              );
+            });
+          },
+          items: [
+            BottomNavigationBarItem(
+              icon: SvgPicture.asset(
+                'assets/Components/BottomNav/1.svg',
+                width: 26,
+                height: 26,
+                color:
+                    _selectedIndex == 0 ? Color(0xFFFCA34D) : Color(0xFFA49EB5),
+              ),
+              label: '',
+            ),
+            BottomNavigationBarItem(
+              icon: SvgPicture.asset('assets/Components/BottomNav/2.svg',
                   width: 26,
                   height: 26,
-                  color:
-                      _selectedIndex == 0 ? Color(0xFFFCA34D) : Color(0xFFA49EB5),
+                  color: _selectedIndex == 1
+                      ? Color(0xFFFCA34D)
+                      : Color(0xFFA49EB5)),
+              label: '',
+            ),
+            BottomNavigationBarItem(
+              icon: Container(
+                width: 40.0, // Adjust the size of the circular container
+                height: 40.0,
+                decoration: const BoxDecoration(
+                  shape: BoxShape.circle,
+                  color: Color(0xFF130160),
                 ),
-                label: '',
-              ),
-              BottomNavigationBarItem(
-                icon: SvgPicture.asset('assets/Components/BottomNav/2.svg',
-                    width: 26,
-                    height: 26,
-                    color: _selectedIndex == 1
-                        ? Color(0xFFFCA34D)
-                        : Color(0xFFA49EB5)),
-                label: '',
-              ),
-              BottomNavigationBarItem(
-                icon: Container(
-                  width: 53.0, // Adjust the size of the circular container
-                  height: 53.0,
-                  decoration: const BoxDecoration(
-                    shape: BoxShape.circle,
-                    color: Color(0xFF130160),
-                  ),
-                  child: Icon(
-                    Icons.add,
-                    color: Colors.white,
-                  ),
+                child: Icon(
+                  Icons.add,
+                  color: Colors.white,
                 ),
-                label: '',
               ),
-              BottomNavigationBarItem(
-                icon: SvgPicture.asset('assets/Components/BottomNav/4.svg',
-                    width: 26,
-                    height: 26,
-                    color: _selectedIndex == 3
-                        ? Color(0xFFFCA34D)
-                        : Color(0xFFA49EB5)),
-                label: '',
-              ),
-              BottomNavigationBarItem(
-                icon: SvgPicture.asset('assets/Components/BottomNav/5.svg',
-                    width: 26,
-                    height: 26,
-                    color: _selectedIndex == 4
-                        ? Color(0xFFFCA34D)
-                        : Color(0xFFA49EB5)),
-                label: '',
-              ),
-            ],
-            backgroundColor: Colors.white, // Change the background color here
-            iconSize: 31,
-            selectedItemColor:
-                const Color(0xffFCA34D), // Change the selected item color here
-            unselectedItemColor:
-                Colors.grey, // Change the unselected item color here
-            selectedFontSize: 14, // Adjust the selected item font size here
-            unselectedFontSize: 12, // Adjust the unselected item font size here
-            selectedLabelStyle: const TextStyle(
-                fontWeight:
-                    FontWeight.bold), // Adjust the selected item label style here
-            // borderRadius: BorderRadius.circular(10), // Apply border radius here
-          ),
+              label: '',
+            ),
+            BottomNavigationBarItem(
+              icon: SvgPicture.asset('assets/Components/BottomNav/4.svg',
+                  width: 26,
+                  height: 26,
+                  color: _selectedIndex == 3
+                      ? Color(0xFFFCA34D)
+                      : Color(0xFFA49EB5)),
+              label: '',
+            ),
+            BottomNavigationBarItem(
+              icon: SvgPicture.asset('assets/Components/BottomNav/5.svg',
+                  width: 26,
+                  height: 26,
+                  color: _selectedIndex == 4
+                      ? Color(0xFFFCA34D)
+                      : Color(0xFFA49EB5)),
+              label: '',
+            ),
+          ],
+          backgroundColor: Colors.white, // Change the background color here
+          iconSize: 31,
+          selectedItemColor:
+              const Color(0xffFCA34D), // Change the selected item color here
+          unselectedItemColor:
+              Colors.grey, // Change the unselected item color here
+          selectedFontSize: 14, // Adjust the selected item font size here
+          unselectedFontSize: 12, // Adjust the unselected item font size here
+          selectedLabelStyle: const TextStyle(
+              fontWeight:
+                  FontWeight.bold), // Adjust the selected item label style here
+          // borderRadius: BorderRadius.circular(10), // Apply border radius here
         ),
       ),
     );
