@@ -310,7 +310,7 @@ class _TotalHiredPersonPageState extends State<TotalHiredPersonPage> {
               ),
               child: Center(
                 child: Text(
-                  "View Profile",
+                  "View CompanyProfile",
                   style: TextStyle(
                     fontFamily: 'RobotoBold',
                     fontSize: 9,

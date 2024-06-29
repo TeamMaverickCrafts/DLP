@@ -213,7 +213,7 @@ class _ProfilePageState extends State<ProfilePage> {
                                   crossAxisAlignment: CrossAxisAlignment.end,
                                   children: [
                                     Text(
-                                      "Profile Score",
+                                      "CompanyProfile Score",
                                       style: TextStyle(
                                         color: Colors.white,
                                         fontSize: 12,
@@ -247,7 +247,7 @@ class _ProfilePageState extends State<ProfilePage> {
                                           Expanded(child: SizedBox()),
                                           Text(
                                             "Preview Profile",
-                                            style: TextStyle(color: Colors.white, fontFamily: 'RobotoMedium', fontSize: 11),
+                                            style: TextStyle(color: Colors.white, fontFamily: 'RobotoMedium', fontSize: 10),
                                           )
                                         ],
                                       ),

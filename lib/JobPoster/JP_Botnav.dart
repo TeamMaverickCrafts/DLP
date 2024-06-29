@@ -1,6 +1,9 @@
 import 'package:daily_lancers/Chat/UserChat.dart';
 import 'package:daily_lancers/HomePage/HomePage.dart';
+import 'package:daily_lancers/JobPoster/Dashboard/dash_page.dart';
 import 'package:daily_lancers/JobPoster/Home/JP_Home.dart';
+import 'package:daily_lancers/JobPoster/Notifications.dart';
+import 'package:daily_lancers/JobPoster/Profile_View/about_applicant.dart';
 import 'package:daily_lancers/Profile/profile.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
@@ -34,10 +37,10 @@ class _JP_BotNavState extends State<JP_BotNav> {
         },
         children: [
           const JPHome(),
-          const profile(),
-          const Add(),
+          AboutApplicant(index: 1), // profile(),
+           Add(),
           ChatView(),
-          const Add(),
+          DashPage()  // Add(),
         ],
       ),
       bottomNavigationBar: Container(
@@ -109,7 +112,7 @@ class _JP_BotNavState extends State<JP_BotNav> {
                 label: '',
               ),
               BottomNavigationBarItem(
-                icon: SvgPicture.asset('assets/Components/BottomNav/5.svg',
+                icon: SvgPicture.asset('assets/Components/BottomNav/dashIcon.svg',
                     width: 26,
                     height: 26,
                     color: _selectedIndex == 4

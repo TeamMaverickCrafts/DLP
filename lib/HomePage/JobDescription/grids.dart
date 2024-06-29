@@ -22,41 +22,44 @@ class _EachGridState extends State<EachGrid> {
   Widget build(BuildContext context) {
     return SizedBox(
       width: MediaQuery.of(context).size.height * 0.15,
-      child: Row(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Padding(
-            padding: const EdgeInsets.only(top: 3),
-            child: SvgPicture.asset(widget.svgPath),
-          ),
-          const SizedBox(
-            width: 12,
-          ),
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                widget.title,
-                style: const TextStyle(
-                  color: Color(0xff150B3D),
-                  fontSize: 13,
-                  fontFamily: "RobotoBold",
+      child: SingleChildScrollView(
+        scrollDirection: Axis.horizontal,
+        child: Row(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Padding(
+              padding: const EdgeInsets.only(top: 3),
+              child: SvgPicture.asset(widget.svgPath),
+            ),
+            const SizedBox(
+              width: 10,
+            ),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  widget.title,
+                  style: const TextStyle(
+                    color: Color(0xff150B3D),
+                    fontSize: 13,
+                    fontFamily: "RobotoBold",
+                  ),
                 ),
-              ),
-              SizedBox(
-                height: 5.0,
-              ),
-              Text(
-                widget.subtitle,
-                style: const TextStyle(
-                  color: Color(0xff524B6B),
-                  fontSize: 12,
-                  fontFamily: "RobotoMedium",
+                SizedBox(
+                  height: 5.0,
                 ),
-              ),
-            ],
-          ),
-        ],
+                Text(
+                  widget.subtitle,
+                  style: const TextStyle(
+                    color: Color(0xff524B6B),
+                    fontSize: 10,
+                    fontFamily: "RobotoMedium",
+                  ),
+                ),
+              ],
+            ),
+          ],
+        ),
       ),
     );
   }

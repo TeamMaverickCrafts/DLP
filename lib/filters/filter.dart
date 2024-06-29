@@ -249,7 +249,7 @@ class _FilterState extends State<Filter> {
                       },
                       child: Container(
                         height: MediaQuery.of(context).size.height * 0.04,
-                        width: 107,
+                        width: 100,
                         decoration: BoxDecoration(
                             color: selectedGender == 'Male'
                                 ? Color(0xffFFD6AD)
@@ -273,7 +273,7 @@ class _FilterState extends State<Filter> {
                       },
                       child: Container(
                           height: MediaQuery.of(context).size.height * 0.04,
-                          width: 107,
+                          width: 100,
                           decoration: BoxDecoration(
                               color: selectedGender == 'Female'
                                   ? Color(0xffFFD6AD)
@@ -297,7 +297,7 @@ class _FilterState extends State<Filter> {
                       },
                       child: Container(
                           height: MediaQuery.of(context).size.height * 0.04,
-                          width: 107,
+                          width: 100,
                           decoration: BoxDecoration(
                               color: selectedGender == 'Other'
                                   ? Color(0xffFFD6AD)
@@ -518,7 +518,7 @@ class _FilterState extends State<Filter> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Container(
-                        width: MediaQuery.of(context).size.width * 0.45,
+                        width: MediaQuery.of(context).size.width * 0.44,
                         child: Column(
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
@@ -534,7 +534,7 @@ class _FilterState extends State<Filter> {
                               ),
                               Container(
                                 height: 70,
-                                width: 170,
+                                width: 199,
                                 decoration: BoxDecoration(
                                     color: Colors.white,
                                     borderRadius: BorderRadius.circular(20)),
@@ -543,12 +543,12 @@ class _FilterState extends State<Filter> {
                                   child: Row(
                                     children: [
                                       Container(
-                                          padding: EdgeInsets.only(left: 10),
-                                          width: 130,
+                                          width: 120,
                                           child: Center(
                                               child: TextField(
                                             controller: StartDate,
-                                            style: TextStyle(fontSize: 15),
+                                            style: TextStyle(fontSize: 13,
+                                              fontFamily: 'RobotoMedium'),
                                             //editing controller of this TextField
                                             decoration: InputDecoration(
                                                 //icon of text field
@@ -583,7 +583,7 @@ class _FilterState extends State<Filter> {
                                               } else {}
                                             },
                                           ))),
-                                      Image.asset('assets/Calendar Plus.png'),
+                                      Image.asset('assets/CalendarPlus.png',),
                                     ],
                                   ),
                                 ),
@@ -591,7 +591,7 @@ class _FilterState extends State<Filter> {
                             ]),
                       ),
                       Container(
-                        width: MediaQuery.of(context).size.width * 0.45,
+                        width: MediaQuery.of(context).size.width * 0.42,
                         child: Column(
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
@@ -616,48 +616,49 @@ class _FilterState extends State<Filter> {
                                   child: Row(
                                     children: [
                                       Container(
-                                          padding: EdgeInsets.only(left: 10),
-                                          width: 130,
+                                          width: 115,
                                           child: Center(
                                               child: TextField(
-                                            controller: EndDate,
-                                            style: TextStyle(fontSize: 15),
-                                            //editing controller of this TextField
-                                            decoration: InputDecoration(
-                                                //icon of text field
+                                                controller: EndDate,
+                                                style: TextStyle(fontSize: 13,
+                                                    fontFamily: 'RobotoMedium'),
+                                                //editing controller of this TextField
+                                                decoration: InputDecoration(
+                                                  //icon of text field
 
-                                                border: OutlineInputBorder(
-                                                    borderSide:
+                                                    border: OutlineInputBorder(
+                                                        borderSide:
                                                         BorderSide.none)),
-                                            readOnly: true,
-                                            //set it true, so that user will not able to edit text
-                                            onTap: () async {
-                                              final DateNow = DateTime.now();
-                                              DateTime? pickedDate =
+                                                readOnly: true,
+                                                //set it true, so that user will not able to edit text
+                                                onTap: () async {
+                                                  final DateNow = DateTime.now();
+                                                  DateTime? pickedDate =
                                                   await showDatePicker(
                                                       context: context,
                                                       initialDate:
-                                                          DateTime.now(),
+                                                      DateTime.now(),
                                                       firstDate: DateTime(1950),
                                                       //DateTime.now() - not to allow to choose before today.
                                                       lastDate: DateTime(2100));
 
-                                              if (pickedDate != null) {
-                                                print(
-                                                    pickedDate); //pickedDate output format => 2021-03-10 00:00:00.000
-                                                String formattedDate =
+                                                  if (pickedDate != null) {
+                                                    print(
+                                                        pickedDate); //pickedDate output format => 2021-03-10 00:00:00.000
+                                                    String formattedDate =
                                                     DateFormat('dd-MM-yyyy')
                                                         .format(pickedDate);
-                                                print(
-                                                    formattedDate); //formatted date output using intl package =>  2021-03-16
-                                                setState(() {
-                                                  EndDate.text =
-                                                      formattedDate; //set output date to TextField value.
-                                                });
-                                              } else {}
-                                            },
-                                          ))),
-                                      Image.asset('assets/Calendar Plus.png'),
+                                                    print(
+                                                        formattedDate); //formatted date output using intl package =>  2021-03-16
+                                                    setState(() {
+                                                      EndDate.text =
+                                                          formattedDate; //set output date to TextField value.
+                                                    });
+                                                  } else {}
+                                                },
+                                              ))),
+                                      Image.asset('assets/CalendarPlus.png',),
+
                                     ],
                                   ),
                                 ),

@@ -16,6 +16,10 @@ class JobPreview extends StatefulWidget {
 }
 
 class _JobPreviewState extends State<JobPreview> {
+  var mobileNo = "+91 22-6665 3366";
+  var email = "reservations.mumbai@ihcltata.com";
+  var gstin = "27AAACT3957G1Z7";
+
   String currentContent = "description"; // Initial content is description
 
   void changeContent(String newContent) {
@@ -26,7 +30,7 @@ class _JobPreviewState extends State<JobPreview> {
 
   @override
   Widget build(BuildContext context) {
-    Widget contentWidget = _buildDescriptionContent();
+    Widget contentWidget = currentContent == "description" ? _buildDescriptionContent() : _buildHotelInfoContent();
     return Scaffold(
       backgroundColor: const Color(0xFFF9F9F9),
       body: Container(
@@ -158,9 +162,9 @@ class _JobPreviewState extends State<JobPreview> {
                       color: Colors.white,
                       borderRadius: BorderRadius.only(
                         topLeft:
-                            Radius.circular(20), // Radius for top left corner
+                        Radius.circular(20), // Radius for top left corner
                         topRight:
-                            Radius.circular(20), // Radius for top right corner
+                        Radius.circular(20), // Radius for top right corner
                       ),
                     ),
                     width: double.infinity,
@@ -169,75 +173,81 @@ class _JobPreviewState extends State<JobPreview> {
                       padding: EdgeInsets.only(
                           left: MediaQuery.of(context).size.width * 0.055,
                           right: MediaQuery.of(context).size.width * 0.05),
-                      child: Column(
-                        children: [
-                          SizedBox(
-                            height: MediaQuery.of(context).size.height * 0.03,
-                          ),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceAround,
-                            children: [
-                              Container(
-                                width: MediaQuery.of(context).size.width * 0.42,
-                                height:
-                                    MediaQuery.of(context).size.height * 0.053,
-                                child: ElevatedButton(
-                                  onPressed: () {
-                                    changeContent("description");
-                                    print('Description Button Pressed');
-                                  },
-                                  style: ElevatedButton.styleFrom(
-                                    elevation: 0,
-                                    backgroundColor: const Color(0xFF130160),
-                                    shape: RoundedRectangleBorder(
-                                      borderRadius: BorderRadius.circular(8.0),
+                      child: SingleChildScrollView(
+                        child: Column(
+                          children: [
+                            SizedBox(
+                              height: MediaQuery.of(context).size.height * 0.03,
+                            ),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceAround,
+                              children: [
+                                Container(
+                                  width: MediaQuery.of(context).size.width * 0.42,
+                                  height:
+                                  MediaQuery.of(context).size.height * 0.053,
+                                  child: ElevatedButton(
+                                    onPressed: () {
+                                      changeContent("description");
+                                      print('Description Button Pressed');
+                                    },
+                                    style: ElevatedButton.styleFrom(
+                                      elevation: 0,
+                                      // backgroundColor: const Color(0xFF130160),
+                                      backgroundColor: currentContent == "description" ? Color(0xFF130160) : Color(0xFFFFE1D5),
+                                      shape: RoundedRectangleBorder(
+                                        borderRadius: BorderRadius.circular(8.0),
+                                      ),
                                     ),
-                                  ),
-                                  child: const Text(
-                                    "Description",
-                                    style: TextStyle(
-                                      color: Color(0xffFFFFFF),
-                                      fontSize: 14,
-                                      fontFamily: "RobotoBold",
-                                      height: 1.0,
-                                    ),
-                                  ),
-                                ),
-                              ),
-                              Container(
-                                width: MediaQuery.of(context).size.width * 0.42,
-                                height:
-                                    MediaQuery.of(context).size.height * 0.053,
-                                child: ElevatedButton(
-                                  onPressed: () {
-                                    changeContent("hotelInfo");
-                                    print('Hotel Info Button Pressed');
-                                  },
-                                  style: ElevatedButton.styleFrom(
-                                    elevation: 0,
-                                    backgroundColor: const Color(0xFFFFE1D5),
-                                    shape: RoundedRectangleBorder(
-                                      borderRadius: BorderRadius.circular(8.0),
-                                    ),
-                                  ),
-                                  child: const Text(
-                                    "Hotel Info",
-                                    style: TextStyle(
-                                      color: Color(0xff130160),
-                                      fontSize: 14,
-                                      fontFamily: "RobotoBold",
-                                      height: 1.0,
+                                    child: Text(
+                                      "Description",
+                                      style: TextStyle(
+                                        // color: Color(0xffFFFFFF),
+                                        color: currentContent == "description" ? Color(0xffFFFFFF) : Color(0xff130160),
+                                        fontSize: 14,
+                                        fontFamily: "RobotoBold",
+                                        height: 1.0,
+                                      ),
                                     ),
                                   ),
                                 ),
-                              ),
-                            ],
-                          ),
-                          SizedBox(
-                            height: MediaQuery.of(context).size.height * 0.05,
-                          ),
-                          contentWidget,
-                        ],
+                                Container(
+                                  width: MediaQuery.of(context).size.width * 0.42,
+                                  height:
+                                  MediaQuery.of(context).size.height * 0.053,
+                                  child: ElevatedButton(
+                                    onPressed: () {
+                                      changeContent("hotelInfo");
+                                      print('Hotel Info Button Pressed');
+                                    },
+                                    style: ElevatedButton.styleFrom(
+                                      elevation: 0,
+                                      // backgroundColor: const Color(0xFFFFE1D5),
+                                      backgroundColor: currentContent == "hotelInfo" ? Color(0xFF130160) : Color(0xFFFFE1D5),
+                                      shape: RoundedRectangleBorder(
+                                        borderRadius: BorderRadius.circular(8.0),
+                                      ),
+                                    ),
+                                    child:  Text(
+                                      "Hotel Info",
+                                      style: TextStyle(
+                                        // color: Color(0xff130160),
+                                        color: currentContent == "hotelInfo" ? Color(0xffFFFFFF) : Color(0xff130160),
+                                        fontSize: 14,
+                                        fontFamily: "RobotoBold",
+                                        height: 1.0,
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                            SizedBox(
+                              height: MediaQuery.of(context).size.height * 0.05,
+                            ),
+                            contentWidget,
+                          ],
+                        ),
                       ),
                     ),
                   )
@@ -299,7 +309,7 @@ class _JobPreviewState extends State<JobPreview> {
                     subtitle: '₹2500/Hr',
                   ),
                   SizedBox(
-                    width: MediaQuery.of(context).size.width * 0.15,
+                    width: MediaQuery.of(context).size.width * 0.1,
                   ),
                   const EachGrid(
                     svgPath: 'assets/profile/jobtype.svg',
@@ -320,7 +330,7 @@ class _JobPreviewState extends State<JobPreview> {
                     subtitle: 'Both',
                   ),
                   SizedBox(
-                    width: MediaQuery.of(context).size.width * 0.15,
+                    width: MediaQuery.of(context).size.width * 0.1,
                   ),
                   const EachGrid(
                     svgPath: 'assets/profile/trans.svg',
@@ -341,7 +351,7 @@ class _JobPreviewState extends State<JobPreview> {
                     subtitle: '05 October',
                   ),
                   SizedBox(
-                    width: MediaQuery.of(context).size.width * 0.15,
+                    width: MediaQuery.of(context).size.width * 0.1,
                   ),
                   const EachGrid(
                     svgPath: 'assets/profile/clock.svg',
@@ -378,7 +388,7 @@ class _JobPreviewState extends State<JobPreview> {
               demoData[widget.index]['main-location'],
               style: const TextStyle(
                 color: Color(0xff524B6B),
-                fontSize: 14,
+                fontSize: 12,
                 fontFamily: "RobotoRegular",
                 height: 1.0,
               ),
@@ -394,12 +404,13 @@ class _JobPreviewState extends State<JobPreview> {
   }
 
   Widget _buildHotelInfoContent() {
+    var mQuery = MediaQuery.of(context);
     // Build and return hotel info content widget
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
-          "Hotel Info",
+          "About Hotel",
           style: TextStyle(
             color: Color(0xff0D0140),
             fontSize: 18,
@@ -407,6 +418,73 @@ class _JobPreviewState extends State<JobPreview> {
             height: 1.0,
           ),
         ),
+        SizedBox(height: mQuery.size.height*0.023,),
+        Text("Built in 1973, the iconic The Taj Hotel Mumbai stands majestically across from the Gateway of India, overlooking the Arabian Sea. The Tower stands in harmonious contrast to The Taj Mahal Palace with its arched balconies and newly refurbished rooms. Sprawling over 2.6 acres, this luxurious hotel features 10 restaurants and a variety of traditional Indian therapies at Jiva Spa.",style: TextStyle(
+          fontSize: 12,
+          color: Color(0xff524B6B),
+          fontFamily: 'RobotoMedium'
+        ),),
+        SizedBox(height: mQuery.size.height*0.03,),
+        Container(
+          width: 140,
+          height: 30,
+          decoration: BoxDecoration(
+            color: Color(0xffFFE1D5),
+            borderRadius: BorderRadius.circular(6)
+          ),
+          child: Center(
+            child: Text("View Hotel CompanyProfile",style: TextStyle(
+              fontSize: 12,
+              color: Color(0xff0D0140),
+              fontFamily: 'RobotoBold'
+            ),),
+          ),
+        ),
+        SizedBox(height: mQuery.size.height*0.026,),
+        Text("Contacts",style: TextStyle(
+          color: Color(0xff150B3D),
+          fontFamily: 'RobotoBold'
+        ),),
+        SizedBox(height: mQuery.size.height*0.015,),
+        Row(
+          children: [
+            Image.asset("assets/JPImages/profileImages/Call.png"),
+            SizedBox(width: mQuery.size.width*0.023,),
+            Text("$mobileNo",style: TextStyle(
+              fontSize: 12,
+              color: Color(0xff524B6B),
+              fontFamily: 'RobotoRegular'
+            ),)
+          ],
+        ),
+        SizedBox(height: mQuery.size.height*0.005,),
+        Row(
+          children: [
+            Image.asset("assets/JPImages/profileImages/email.png"),
+            SizedBox(width: mQuery.size.width*0.023,),
+            Text("$email",style: TextStyle(
+                fontSize: 12,
+                color: Color(0xff524B6B),
+                fontFamily: 'RobotoRegular'
+            ),)
+          ],
+        ),
+        SizedBox(height: mQuery.size.height*0.026,),
+        Text("GSTIN",style: TextStyle(
+          color: Color(0xff150B3D),
+          fontFamily: 'RobotoBold'
+        ),
+        ),
+        SizedBox(height: mQuery.size.height*0.015,),
+        Text("$gstin",style: TextStyle(
+          color: Color(0xff524B6B),
+          fontSize: 12
+        ),
+        ),
+        SizedBox(
+          height: MediaQuery.of(context).size.height * 0.04,
+        ),
+        Image.asset("assets/map.png")
       ],
     );
   }
@@ -420,10 +498,11 @@ class BottomRow extends StatefulWidget {
 }
 
 class _BottomRowState extends State<BottomRow> {
+  bool _isChecked = false;
   Widget _tandC(BuildContext context) {
-    bool _isChecked = false;
-
+    var mQuery = MediaQuery.of(context);
     return Container(
+      height: mQuery.size.height*0.7,
       decoration: const BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.only(
@@ -433,7 +512,7 @@ class _BottomRowState extends State<BottomRow> {
       ),
       child: Center(
         child: Padding(
-          padding: const EdgeInsets.only(left: 20.0, right: 20.0, top: 35.0),
+          padding: const EdgeInsets.only(left: 20.0, right: 20.0, top: 30.0),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -515,10 +594,8 @@ class _BottomRowState extends State<BottomRow> {
                   Checkbox(
                     value: _isChecked,
                     onChanged: (bool? value) {
-                      // Update the state of the checkbox
-                      // This triggers a rebuild of the UI
                       setState(() {
-                        _isChecked = value!;
+                        _isChecked = value ?? false;
                       });
                     },
                   ),
@@ -542,7 +619,7 @@ class _BottomRowState extends State<BottomRow> {
                   style: ElevatedButton.styleFrom(
                     elevation: 0,
                     backgroundColor:
-                        const Color(0xFFFFD6AD), // Background color
+                    const Color(0xFFFFD6AD), // Background color
                     minimumSize: Size(
                       MediaQuery.of(context).size.width * 1.0,
                       MediaQuery.of(context).size.height * 0.05,
@@ -589,6 +666,7 @@ class _BottomRowState extends State<BottomRow> {
           ElevatedButton(
             onPressed: () {
               showModalBottomSheet(
+                isScrollControlled: true,
                 context: context,
                 builder: (BuildContext context) {
                   return _tandC(context);
@@ -602,7 +680,7 @@ class _BottomRowState extends State<BottomRow> {
                   56), // Set the width and height
               shape: RoundedRectangleBorder(
                 borderRadius:
-                    BorderRadius.circular(8), // Adjust the radius as needed
+                BorderRadius.circular(8), // Adjust the radius as needed
               ),
             ),
             child: const Text(

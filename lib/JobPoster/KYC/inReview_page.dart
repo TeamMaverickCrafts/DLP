@@ -1,6 +1,10 @@
+
+import 'package:daily_lancers/JobPoster/JP_Botnav.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+
+String inReview = "";
 
 class InReviewPage extends StatefulWidget {
   const InReviewPage({Key? key}) : super(key: key);
@@ -145,12 +149,13 @@ class _InReviewPageState extends State<InReviewPage> {
                         child: Column(
                           children: [
                             GestureDetector(
-                              // onTap: (){
-                              //   Navigator.push(context,
-                              //             MaterialPageRoute(builder: (context) {
-                              //           return DocVerificationP1();
-                              //         }));
-                              // },
+                              onTap: (){
+                                Navigator.pushReplacement(context,
+                                          MaterialPageRoute(builder: (context) {
+                                            inReview = "InReview";
+                                        return JP_BotNav();
+                                      }));
+                              },
                               child: Container(
                                 width: double.infinity,
                                 height: 50,

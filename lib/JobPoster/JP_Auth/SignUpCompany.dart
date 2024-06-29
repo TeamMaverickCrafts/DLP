@@ -272,7 +272,7 @@ class _SignUpCompanyState extends State<SignUpCompany> {
               const Row(
                 children: [
                   Text(
-                    "Contact Person Job Profile",
+                    "Contact Person Job CompanyProfile",
                     style: TextStyle(
                       fontFamily: "RobotoBold",
                       fontSize: 14,

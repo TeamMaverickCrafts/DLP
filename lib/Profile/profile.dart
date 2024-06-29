@@ -444,7 +444,7 @@ class _profileState extends State<profile> {
                       crossAxisAlignment: CrossAxisAlignment.end,
                       children: [
                         Text(
-                          "Profile Score",
+                          "CompanyProfile Score",
                           style: TextStyle(
                             color: Colors.white,
                             fontSize: 12,

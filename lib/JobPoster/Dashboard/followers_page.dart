@@ -203,7 +203,7 @@ class _FollowersPageState extends State<FollowersPage> {
               ),
               child: Center(
                 child: Text(
-                  "View Profile",
+                  "View CompanyProfile",
                   style: TextStyle(
                     fontFamily: 'RobotoBold',
                     fontSize: 9,

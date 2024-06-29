@@ -138,7 +138,7 @@ class _HomeState extends State<Home> {
                                   backgroundColor: Colors.white,
                                   child: ClipOval(
                                     child: Image.asset(
-                                      "assets/Components/Profile.png",
+                                      "assets/Components/CompanyProfile.png",
                                       width: 34,
                                       height: 34,
                                       fit: BoxFit.cover,
